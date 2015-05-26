@@ -25,7 +25,7 @@ namespace FertilizerProject
             try
             {
                 _User = new User();
-                _User.nUserID = 0;
+                _User.nUserID = Convert.ToInt64(txtUserID.Text);
                 _User.sFirstName = txtFirstName.Text.Trim();
                 _User.sLastName = txtLastName.Text.Trim();
                 _User.sEmail = txtEmail.Text.Trim();

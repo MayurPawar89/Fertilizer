@@ -97,6 +97,32 @@ namespace FertilizerProject.App_Data
             }
             return this.nUserID;
         }
+
+        public DataTable GetUser(Int64 UserID = 0)
+        {
+            DataTable _dt = null;
+
+            DBParameters _DBParameters = new DBParameters();
+            DataAccess _DataAccess = new DataAccess();
+            try
+            {
+                _DataAccess.OpenConnection(false);
+                _DBParameters.clear();
+                _DBParameters.Add("@nUserID", UserID, ParameterDirection.Input, SqlDbType.BigInt);
+                _DataAccess.Retrive("gsp_GetUsers", _DBParameters, out _dt);
+
+                _DataAccess.CloseConnection(false);
+            }
+            catch (Exception )
+            {
+                if (_DataAccess != null) { _DataAccess.RollBack(); _DataAccess.CloseConnection(false); }
+            }
+            finally
+            {
+                if (_DBParameters != null) { _DBParameters.Dispose(); }
+            }
+            return _dt;
+        }
         #endregion
     }
 }
