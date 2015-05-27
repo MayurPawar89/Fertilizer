@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
 using System.Windows.Forms;
 
 namespace FertilizerProject.App_Data
 {
-    class User
+    class Customer
     {
         #region "Constructor & Distructor"
         private bool disposed = false;
-        public User()
+        public Customer()
         {
         }
         public void Dispose()
@@ -33,31 +33,36 @@ namespace FertilizerProject.App_Data
             disposed = true;
         }
 
-        ~User()
+        ~Customer()
         {
             Dispose(false);
         }
         #endregion
 
         #region "Properties"
-        public Int64 nUserID { get; set; }
+        public Int64 nCustID { get; set; }
 
         public string sFirstName { get; set; }
 
         public string sLastName { get; set; }
 
+        public string sAddress { get; set; }
+
+        public string sPhoneNo { get; set; }
+
         public string sEmail { get; set; }
 
-        public string sPassword { get; set; }
+        public string sCity { get; set; }
 
-        public string sUserName { get; set; }
+        public DateTime dtDOB { get; set; }
         #endregion
 
         #region"Methods"
-        public Int64 InsertUpdateUser()
+        public Int64 InsertUpdateCustomer()
         {
             DBParameters _DBParameters = new DBParameters();
             DataAccess _DataAccess = new DataAccess();
+            Int64 _result = 0;
             object _val = null;
             try
             {
@@ -67,16 +72,19 @@ namespace FertilizerProject.App_Data
                 _DataAccess.OpenConnection(false);
 
                 _DBParameters.clear();
-                _DBParameters.Add("@nUserID", this.nUserID, ParameterDirection.InputOutput, SqlDbType.BigInt);
+                _DBParameters.Add("@nCustID", this.nCustID, ParameterDirection.InputOutput, SqlDbType.BigInt);
                 _DBParameters.Add("@sFirstName", this.sFirstName, ParameterDirection.Input, SqlDbType.VarChar);
                 _DBParameters.Add("@sLastName", this.sLastName, ParameterDirection.Input, SqlDbType.VarChar);
+                _DBParameters.Add("@sAddress", this.sAddress, ParameterDirection.Input, SqlDbType.VarChar);
+                _DBParameters.Add("@sPhoneNo", this.sPhoneNo, ParameterDirection.Input, SqlDbType.VarChar);
                 _DBParameters.Add("@sEmail", this.sEmail, ParameterDirection.Input, SqlDbType.VarChar);
-                _DBParameters.Add("@sUserName", this.sUserName, ParameterDirection.Input, SqlDbType.VarChar);
-                _DBParameters.Add("@sPassword", this.sPassword, ParameterDirection.Input, SqlDbType.VarChar);
-                _DataAccess.Execute("gsp_InsertUpdateUser", _DBParameters, out _val);
+                _DBParameters.Add("@sCity", this.sCity, ParameterDirection.Input, SqlDbType.VarChar);
+                _DBParameters.Add("@dtDOB", this.dtDOB, ParameterDirection.Input, SqlDbType.DateTime);
+                _DataAccess.Execute("gsp_InsertUpdateCustomer", _DBParameters, out _val);
 
-                this.nUserID = (Int64)_val;
+                this.nCustID = (Int64)_val;
                 _DataAccess.CloseConnection(false);
+                _result = this.nCustID;
             }
             catch (Exception ex)
             {
@@ -95,10 +103,10 @@ namespace FertilizerProject.App_Data
                     _DataAccess.Dispose();
                 }
             }
-            return this.nUserID;
+            return _result;
         }
 
-        public DataTable GetUser(Int64 UserID = 0)
+        public DataTable GetCustomer(Int64 CustID = 0)
         {
             DataTable _dt = null;
 
@@ -108,12 +116,12 @@ namespace FertilizerProject.App_Data
             {
                 _DataAccess.OpenConnection(false);
                 _DBParameters.clear();
-                _DBParameters.Add("@nUserID", UserID, ParameterDirection.Input, SqlDbType.BigInt);
-                _DataAccess.Retrive("gsp_GetUsers", _DBParameters, out _dt);
+                _DBParameters.Add("@nCustID", CustID, ParameterDirection.Input, SqlDbType.BigInt);
+                _DataAccess.Retrive("gsp_GetCustomer", _DBParameters, out _dt);
 
                 _DataAccess.CloseConnection(false);
             }
-            catch (Exception )
+            catch (Exception)
             {
                 if (_DataAccess != null) { _DataAccess.RollBack(); _DataAccess.CloseConnection(false); }
             }

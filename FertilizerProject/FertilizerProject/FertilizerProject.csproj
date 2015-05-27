@@ -63,7 +63,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Data\Customer.cs" />
     <Compile Include="App_Data\DataAccess.cs" />
+    <Compile Include="App_Data\Fertilizer.cs" />
     <Compile Include="App_Data\User.cs" />
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
@@ -71,28 +73,73 @@
     <Compile Include="Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Edit\frmEditCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\frmEditCustomer.Designer.cs">
+      <DependentUpon>frmEditCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\frmEditFertilizer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\frmEditFertilizer.Designer.cs">
+      <DependentUpon>frmEditFertilizer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Edit\frmEditUser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Edit\frmEditUser.Designer.cs">
       <DependentUpon>frmEditUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Users.cs">
+    <Compile Include="ToolsAndSettings\ServerSettings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Users.Designer.cs">
-      <DependentUpon>Users.cs</DependentUpon>
+    <Compile Include="ToolsAndSettings\ServerSettings.Designer.cs">
+      <DependentUpon>ServerSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmViewCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmViewCustomer.Designer.cs">
+      <DependentUpon>frmViewCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmViewFertilizer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmViewFertilizer.Designer.cs">
+      <DependentUpon>frmViewFertilizer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmViewUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmViewUsers.Designer.cs">
+      <DependentUpon>frmViewUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Edit\frmEditCustomer.resx">
+      <DependentUpon>frmEditCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\frmEditFertilizer.resx">
+      <DependentUpon>frmEditFertilizer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Edit\frmEditUser.resx">
       <DependentUpon>frmEditUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Users.resx">
-      <DependentUpon>Users.cs</DependentUpon>
+    <EmbeddedResource Include="ToolsAndSettings\ServerSettings.resx">
+      <DependentUpon>ServerSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmViewCustomer.resx">
+      <DependentUpon>frmViewCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmViewFertilizer.resx">
+      <DependentUpon>frmViewFertilizer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmViewUsers.resx">
+      <DependentUpon>frmViewUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -136,7 +183,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Go\" />
-    <Folder Include="View\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

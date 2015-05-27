@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
 using System.Windows.Forms;
 
 namespace FertilizerProject.App_Data
 {
-    class User
+    class Fertilizer
     {
         #region "Constructor & Distructor"
         private bool disposed = false;
-        public User()
+        public Fertilizer()
         {
         }
         public void Dispose()
@@ -33,31 +33,34 @@ namespace FertilizerProject.App_Data
             disposed = true;
         }
 
-        ~User()
+        ~Fertilizer()
         {
             Dispose(false);
         }
         #endregion
 
         #region "Properties"
-        public Int64 nUserID { get; set; }
+        public Int64 nFertID { get; set; }
 
-        public string sFirstName { get; set; }
+        public string sFertName { get; set; }
 
-        public string sLastName { get; set; }
+        public string sFertCompany { get; set; }
 
-        public string sEmail { get; set; }
+        public Decimal nQuntity { get; set; }
 
-        public string sPassword { get; set; }
+        public Decimal nUnitPrice { get; set; }
 
-        public string sUserName { get; set; }
+        public string sFertUsage { get; set; }
+
+        public Decimal nDiscount { get; set; }
         #endregion
 
         #region"Methods"
-        public Int64 InsertUpdateUser()
+        public Int64 InsertUpdateFertilizer()
         {
             DBParameters _DBParameters = new DBParameters();
             DataAccess _DataAccess = new DataAccess();
+            Int64 _result = 0;
             object _val = null;
             try
             {
@@ -67,16 +70,18 @@ namespace FertilizerProject.App_Data
                 _DataAccess.OpenConnection(false);
 
                 _DBParameters.clear();
-                _DBParameters.Add("@nUserID", this.nUserID, ParameterDirection.InputOutput, SqlDbType.BigInt);
-                _DBParameters.Add("@sFirstName", this.sFirstName, ParameterDirection.Input, SqlDbType.VarChar);
-                _DBParameters.Add("@sLastName", this.sLastName, ParameterDirection.Input, SqlDbType.VarChar);
-                _DBParameters.Add("@sEmail", this.sEmail, ParameterDirection.Input, SqlDbType.VarChar);
-                _DBParameters.Add("@sUserName", this.sUserName, ParameterDirection.Input, SqlDbType.VarChar);
-                _DBParameters.Add("@sPassword", this.sPassword, ParameterDirection.Input, SqlDbType.VarChar);
-                _DataAccess.Execute("gsp_InsertUpdateUser", _DBParameters, out _val);
+                _DBParameters.Add("@nFertID", this.nFertID, ParameterDirection.InputOutput, SqlDbType.BigInt);
+                _DBParameters.Add("@sFertName", this.sFertName, ParameterDirection.Input, SqlDbType.VarChar);
+                _DBParameters.Add("@sFertCompany", this.sFertCompany, ParameterDirection.Input, SqlDbType.VarChar);
+                _DBParameters.Add("@nQuntity", this.nQuntity, ParameterDirection.Input, SqlDbType.Decimal);
+                _DBParameters.Add("@nUnitPrice", this.nUnitPrice, ParameterDirection.Input, SqlDbType.Decimal);
+                _DBParameters.Add("@sFertUsage", this.sFertUsage, ParameterDirection.Input, SqlDbType.VarChar);
+                _DBParameters.Add("@nDiscount", this.nDiscount, ParameterDirection.Input, SqlDbType.Decimal);
+                _DataAccess.Execute("gsp_InsertUpdateFertilizer", _DBParameters, out _val);
 
-                this.nUserID = (Int64)_val;
+                this.nFertID = (Int64)_val;
                 _DataAccess.CloseConnection(false);
+                _result = this.nFertID;
             }
             catch (Exception ex)
             {
@@ -95,10 +100,10 @@ namespace FertilizerProject.App_Data
                     _DataAccess.Dispose();
                 }
             }
-            return this.nUserID;
+            return _result;
         }
 
-        public DataTable GetUser(Int64 UserID = 0)
+        public DataTable GetFertilizer(Int64 FertID = 0)
         {
             DataTable _dt = null;
 
@@ -108,12 +113,12 @@ namespace FertilizerProject.App_Data
             {
                 _DataAccess.OpenConnection(false);
                 _DBParameters.clear();
-                _DBParameters.Add("@nUserID", UserID, ParameterDirection.Input, SqlDbType.BigInt);
-                _DataAccess.Retrive("gsp_GetUsers", _DBParameters, out _dt);
+                _DBParameters.Add("@nFertID", FertID, ParameterDirection.Input, SqlDbType.BigInt);
+                _DataAccess.Retrive("gsp_GetFertilizer", _DBParameters, out _dt);
 
                 _DataAccess.CloseConnection(false);
             }
-            catch (Exception )
+            catch (Exception)
             {
                 if (_DataAccess != null) { _DataAccess.RollBack(); _DataAccess.CloseConnection(false); }
             }

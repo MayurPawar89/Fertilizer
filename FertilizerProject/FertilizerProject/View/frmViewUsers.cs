@@ -12,9 +12,9 @@ using FertilizerProject.App_Data;
 
 namespace FertilizerProject
 {
-    public partial class Users : Form
+    public partial class frmViewUsers : Form
     {
-        public Users()
+        public frmViewUsers()
         {
             InitializeComponent();
         }
@@ -31,7 +31,7 @@ namespace FertilizerProject
                 _User.sEmail = txtEmail.Text.Trim();
                 _User.sUserName = txtUserName.Text.Trim();
                 _User.sPassword = txtPassword.Text.Trim();
-                _User.InsertUser();
+                _User.InsertUpdateUser();
             }
             catch (Exception ex)
             {

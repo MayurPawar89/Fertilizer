@@ -30,14 +30,19 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.TSMI_File = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSMI_FileExit = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMI_Edit = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSMI_EditUser = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSMI_EditFertilizer = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMI_View = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSMI_ViewUser = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSMI_ViewFertilizer = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMI_Go = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMI_Tools_Settings = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMI_Exit = new System.Windows.Forms.ToolStripMenuItem();
-            this.TSMI_FileExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.TSMI_EditUser = new System.Windows.Forms.ToolStripMenuItem();
-            this.TSMI_ViewUser = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSMI_ViewCustomer = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSMI_EditCustomer = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSMI_ToolSetting_ServerSetting = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,21 +69,59 @@
             this.TSMI_File.Size = new System.Drawing.Size(37, 20);
             this.TSMI_File.Text = "&File";
             // 
+            // TSMI_FileExit
+            // 
+            this.TSMI_FileExit.Name = "TSMI_FileExit";
+            this.TSMI_FileExit.Size = new System.Drawing.Size(92, 22);
+            this.TSMI_FileExit.Text = "E&xit";
+            // 
             // TSMI_Edit
             // 
             this.TSMI_Edit.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.TSMI_EditUser});
+            this.TSMI_EditUser,
+            this.TSMI_EditFertilizer,
+            this.TSMI_EditCustomer});
             this.TSMI_Edit.Name = "TSMI_Edit";
             this.TSMI_Edit.Size = new System.Drawing.Size(39, 20);
             this.TSMI_Edit.Text = "&Edit";
             // 
+            // TSMI_EditUser
+            // 
+            this.TSMI_EditUser.Name = "TSMI_EditUser";
+            this.TSMI_EditUser.Size = new System.Drawing.Size(152, 22);
+            this.TSMI_EditUser.Text = "&User";
+            this.TSMI_EditUser.Click += new System.EventHandler(this.TSMI_EditUser_Click);
+            // 
+            // TSMI_EditFertilizer
+            // 
+            this.TSMI_EditFertilizer.Name = "TSMI_EditFertilizer";
+            this.TSMI_EditFertilizer.Size = new System.Drawing.Size(152, 22);
+            this.TSMI_EditFertilizer.Text = "&Fertilizer";
+            this.TSMI_EditFertilizer.Click += new System.EventHandler(this.TSMI_EditFertilizer_Click);
+            // 
             // TSMI_View
             // 
             this.TSMI_View.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.TSMI_ViewUser});
+            this.TSMI_ViewUser,
+            this.TSMI_ViewFertilizer,
+            this.TSMI_ViewCustomer});
             this.TSMI_View.Name = "TSMI_View";
             this.TSMI_View.Size = new System.Drawing.Size(44, 20);
             this.TSMI_View.Text = "&View";
+            // 
+            // TSMI_ViewUser
+            // 
+            this.TSMI_ViewUser.Name = "TSMI_ViewUser";
+            this.TSMI_ViewUser.Size = new System.Drawing.Size(152, 22);
+            this.TSMI_ViewUser.Text = "&User";
+            this.TSMI_ViewUser.Click += new System.EventHandler(this.TSMI_ViewUser_Click);
+            // 
+            // TSMI_ViewFertilizer
+            // 
+            this.TSMI_ViewFertilizer.Name = "TSMI_ViewFertilizer";
+            this.TSMI_ViewFertilizer.Size = new System.Drawing.Size(152, 22);
+            this.TSMI_ViewFertilizer.Text = "&Fertilizer";
+            this.TSMI_ViewFertilizer.Click += new System.EventHandler(this.TSMI_ViewFertilizer_Click);
             // 
             // TSMI_Go
             // 
@@ -88,6 +131,8 @@
             // 
             // TSMI_Tools_Settings
             // 
+            this.TSMI_Tools_Settings.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TSMI_ToolSetting_ServerSetting});
             this.TSMI_Tools_Settings.Name = "TSMI_Tools_Settings";
             this.TSMI_Tools_Settings.Size = new System.Drawing.Size(106, 20);
             this.TSMI_Tools_Settings.Text = "&Tools && Settings";
@@ -98,24 +143,26 @@
             this.TSMI_Exit.Size = new System.Drawing.Size(37, 20);
             this.TSMI_Exit.Text = "E&xit";
             // 
-            // TSMI_FileExit
+            // TSMI_ViewCustomer
             // 
-            this.TSMI_FileExit.Name = "TSMI_FileExit";
-            this.TSMI_FileExit.Size = new System.Drawing.Size(152, 22);
-            this.TSMI_FileExit.Text = "E&xit";
+            this.TSMI_ViewCustomer.Name = "TSMI_ViewCustomer";
+            this.TSMI_ViewCustomer.Size = new System.Drawing.Size(152, 22);
+            this.TSMI_ViewCustomer.Text = "&Customer";
+            this.TSMI_ViewCustomer.Click += new System.EventHandler(this.TSMI_ViewCustomer_Click);
             // 
-            // TSMI_EditUser
+            // TSMI_EditCustomer
             // 
-            this.TSMI_EditUser.Name = "TSMI_EditUser";
-            this.TSMI_EditUser.Size = new System.Drawing.Size(152, 22);
-            this.TSMI_EditUser.Text = "&User";
-            this.TSMI_EditUser.Click += new System.EventHandler(this.TSMI_EditUser_Click);
+            this.TSMI_EditCustomer.Name = "TSMI_EditCustomer";
+            this.TSMI_EditCustomer.Size = new System.Drawing.Size(152, 22);
+            this.TSMI_EditCustomer.Text = "&Customer";
+            this.TSMI_EditCustomer.Click += new System.EventHandler(this.TSMI_EditCustomer_Click);
             // 
-            // TSMI_ViewUser
+            // TSMI_ToolSetting_ServerSetting
             // 
-            this.TSMI_ViewUser.Name = "TSMI_ViewUser";
-            this.TSMI_ViewUser.Size = new System.Drawing.Size(152, 22);
-            this.TSMI_ViewUser.Text = "&User";
+            this.TSMI_ToolSetting_ServerSetting.Name = "TSMI_ToolSetting_ServerSetting";
+            this.TSMI_ToolSetting_ServerSetting.Size = new System.Drawing.Size(152, 22);
+            this.TSMI_ToolSetting_ServerSetting.Text = "&Server Setting";
+            this.TSMI_ToolSetting_ServerSetting.Click += new System.EventHandler(this.TSMI_ToolSetting_ServerSetting_Click);
             // 
             // Dashboard
             // 
@@ -147,5 +194,10 @@
         private System.Windows.Forms.ToolStripMenuItem TSMI_Go;
         private System.Windows.Forms.ToolStripMenuItem TSMI_Tools_Settings;
         private System.Windows.Forms.ToolStripMenuItem TSMI_Exit;
+        private System.Windows.Forms.ToolStripMenuItem TSMI_EditFertilizer;
+        private System.Windows.Forms.ToolStripMenuItem TSMI_ViewFertilizer;
+        private System.Windows.Forms.ToolStripMenuItem TSMI_ViewCustomer;
+        private System.Windows.Forms.ToolStripMenuItem TSMI_EditCustomer;
+        private System.Windows.Forms.ToolStripMenuItem TSMI_ToolSetting_ServerSetting;
     }
 }

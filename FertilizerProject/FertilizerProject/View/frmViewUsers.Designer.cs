@@ -1,6 +1,6 @@
 ﻿namespace FertilizerProject
 {
-    partial class Users
+    partial class frmViewUsers
     {
         /// <summary>
         /// Required designer variable.

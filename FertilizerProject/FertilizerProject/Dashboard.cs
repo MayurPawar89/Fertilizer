@@ -26,5 +26,53 @@ namespace FertilizerProject
             frm.Dock = DockStyle.Fill;
             frm.Show();
         }
+
+        private void TSMI_EditFertilizer_Click(object sender, EventArgs e)
+        {
+            frmEditFertilizer frm = new frmEditFertilizer();
+            frm.MdiParent = this;
+            frm.Dock = DockStyle.Fill;
+            frm.Show();
+        }
+
+        private void TSMI_ViewFertilizer_Click(object sender, EventArgs e)
+        {
+            frmViewFertilizer frm = new frmViewFertilizer();
+            frm.MdiParent = this;
+            frm.Dock = DockStyle.Fill;
+            frm.Show();
+        }
+
+        private void TSMI_ViewUser_Click(object sender, EventArgs e)
+        {
+            frmViewUsers frm = new frmViewUsers();
+            frm.MdiParent = this;
+            frm.Dock = DockStyle.Fill;
+            frm.Show();
+        }
+
+        private void TSMI_ViewCustomer_Click(object sender, EventArgs e)
+        {
+            frmViewCustomer frm = new frmViewCustomer();
+            frm.MdiParent = this;
+            frm.Dock = DockStyle.Fill;
+            frm.Show();
+        }
+
+        private void TSMI_EditCustomer_Click(object sender, EventArgs e)
+        {
+            frmEditCustomer frm = new frmEditCustomer();
+            frm.MdiParent = this;
+            frm.Dock = DockStyle.Fill;
+            frm.Show();
+        }
+
+        private void TSMI_ToolSetting_ServerSetting_Click(object sender, EventArgs e)
+        {
+            ServerSettings frm = new ServerSettings();
+            frm.MdiParent = this;
+            frm.Dock = DockStyle.Fill;
+            frm.Show();
+        }
     }
 }
