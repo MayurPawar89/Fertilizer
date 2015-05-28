@@ -91,6 +91,17 @@
     <Compile Include="Edit\frmEditUser.Designer.cs">
       <DependentUpon>frmEditUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Go\frmGoInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Go\frmGoInvoice.Designer.cs">
+      <DependentUpon>frmGoInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="ToolsAndSettings\ServerSettings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +140,9 @@
     <EmbeddedResource Include="Edit\frmEditUser.resx">
       <DependentUpon>frmEditUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Go\frmGoInvoice.resx">
+      <DependentUpon>frmGoInvoice.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ToolsAndSettings\ServerSettings.resx">
       <DependentUpon>ServerSettings.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,14 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -181,8 +190,23 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Go\" />
+    <None Include="Resources\agri11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Agriculture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agriculture_green_nature.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner_agriculture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Modify.png" />
+    <Content Include="Resources\New.png" />
+    <Content Include="Resources\Remove.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

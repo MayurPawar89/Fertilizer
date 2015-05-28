@@ -28,10 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditUser));
             this.trvUsers = new System.Windows.Forms.TreeView();
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.pnlOther = new System.Windows.Forms.Panel();
             this.pnlContent = new System.Windows.Forms.Panel();
             this.grpBoxUsers = new System.Windows.Forms.GroupBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtUserID = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.txtUserName = new System.Windows.Forms.TextBox();
@@ -43,12 +47,19 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlTreeView = new System.Windows.Forms.Panel();
-            this.txtUserID = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.pnlTopManuStrip = new System.Windows.Forms.Panel();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tsbNew = new System.Windows.Forms.ToolStripButton();
+            this.tsbModify = new System.Windows.Forms.ToolStripButton();
+            this.tsbDelete = new System.Windows.Forms.ToolStripButton();
+            this.tsbClose = new System.Windows.Forms.ToolStripButton();
             this.pnlMain.SuspendLayout();
+            this.pnlOther.SuspendLayout();
             this.pnlContent.SuspendLayout();
             this.grpBoxUsers.SuspendLayout();
             this.pnlTreeView.SuspendLayout();
+            this.pnlTopManuStrip.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // trvUsers
@@ -56,19 +67,29 @@
             this.trvUsers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.trvUsers.Location = new System.Drawing.Point(0, 0);
             this.trvUsers.Name = "trvUsers";
-            this.trvUsers.Size = new System.Drawing.Size(200, 440);
+            this.trvUsers.Size = new System.Drawing.Size(200, 384);
             this.trvUsers.TabIndex = 0;
             this.trvUsers.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.trvUsers_NodeMouseClick);
             // 
             // pnlMain
             // 
-            this.pnlMain.Controls.Add(this.pnlContent);
-            this.pnlMain.Controls.Add(this.pnlTreeView);
+            this.pnlMain.Controls.Add(this.pnlOther);
+            this.pnlMain.Controls.Add(this.pnlTopManuStrip);
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMain.Location = new System.Drawing.Point(0, 0);
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(730, 440);
             this.pnlMain.TabIndex = 1;
+            // 
+            // pnlOther
+            // 
+            this.pnlOther.Controls.Add(this.pnlContent);
+            this.pnlOther.Controls.Add(this.pnlTreeView);
+            this.pnlOther.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlOther.Location = new System.Drawing.Point(0, 56);
+            this.pnlOther.Name = "pnlOther";
+            this.pnlOther.Size = new System.Drawing.Size(730, 384);
+            this.pnlOther.TabIndex = 27;
             // 
             // pnlContent
             // 
@@ -76,7 +97,7 @@
             this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContent.Location = new System.Drawing.Point(200, 0);
             this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(530, 440);
+            this.pnlContent.Size = new System.Drawing.Size(530, 384);
             this.pnlContent.TabIndex = 2;
             // 
             // grpBoxUsers
@@ -96,10 +117,28 @@
             this.grpBoxUsers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpBoxUsers.Location = new System.Drawing.Point(0, 0);
             this.grpBoxUsers.Name = "grpBoxUsers";
-            this.grpBoxUsers.Size = new System.Drawing.Size(530, 440);
+            this.grpBoxUsers.Size = new System.Drawing.Size(530, 384);
             this.grpBoxUsers.TabIndex = 0;
             this.grpBoxUsers.TabStop = false;
-            this.grpBoxUsers.Text = "groupBox1";
+            this.grpBoxUsers.Text = "User Information";
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(293, 40);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(134, 20);
+            this.txtPassword.TabIndex = 26;
+            this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.Visible = false;
+            // 
+            // txtUserID
+            // 
+            this.txtUserID.Location = new System.Drawing.Point(319, 14);
+            this.txtUserID.Name = "txtUserID";
+            this.txtUserID.Size = new System.Drawing.Size(84, 20);
+            this.txtUserID.TabIndex = 24;
+            this.txtUserID.Text = "0";
+            this.txtUserID.Visible = false;
             // 
             // btnCancel
             // 
@@ -190,45 +229,105 @@
             this.pnlTreeView.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlTreeView.Location = new System.Drawing.Point(0, 0);
             this.pnlTreeView.Name = "pnlTreeView";
-            this.pnlTreeView.Size = new System.Drawing.Size(200, 440);
+            this.pnlTreeView.Size = new System.Drawing.Size(200, 384);
             this.pnlTreeView.TabIndex = 2;
             // 
-            // txtUserID
+            // pnlTopManuStrip
             // 
-            this.txtUserID.Location = new System.Drawing.Point(319, 14);
-            this.txtUserID.Name = "txtUserID";
-            this.txtUserID.Size = new System.Drawing.Size(84, 20);
-            this.txtUserID.TabIndex = 24;
-            this.txtUserID.Text = "0";
-            this.txtUserID.Visible = false;
+            this.pnlTopManuStrip.Controls.Add(this.toolStrip1);
+            this.pnlTopManuStrip.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTopManuStrip.Location = new System.Drawing.Point(0, 0);
+            this.pnlTopManuStrip.Name = "pnlTopManuStrip";
+            this.pnlTopManuStrip.Size = new System.Drawing.Size(730, 56);
+            this.pnlTopManuStrip.TabIndex = 27;
             // 
-            // txtPassword
+            // toolStrip1
             // 
-            this.txtPassword.Location = new System.Drawing.Point(293, 40);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(134, 20);
-            this.txtPassword.TabIndex = 26;
-            this.txtPassword.UseSystemPasswordChar = true;
-            this.txtPassword.Visible = false;
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbNew,
+            this.tsbModify,
+            this.tsbDelete,
+            this.tsbClose});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(730, 56);
+            this.toolStrip1.TabIndex = 0;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // tsbNew
+            // 
+            this.tsbNew.AutoSize = false;
+            this.tsbNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.tsbNew.Image = ((System.Drawing.Image)(resources.GetObject("tsbNew.Image")));
+            this.tsbNew.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbNew.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbNew.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
+            this.tsbNew.Name = "tsbNew";
+            this.tsbNew.Size = new System.Drawing.Size(63, 56);
+            this.tsbNew.Text = "New";
+            this.tsbNew.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.tsbNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsbNew.ToolTipText = "New User";
+            // 
+            // tsbModify
+            // 
+            this.tsbModify.Image = ((System.Drawing.Image)(resources.GetObject("tsbModify.Image")));
+            this.tsbModify.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbModify.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbModify.Margin = new System.Windows.Forms.Padding(0);
+            this.tsbModify.Name = "tsbModify";
+            this.tsbModify.Size = new System.Drawing.Size(49, 56);
+            this.tsbModify.Text = "Modify";
+            this.tsbModify.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.tsbModify.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsbModify.ToolTipText = "Modify User";
+            // 
+            // tsbDelete
+            // 
+            this.tsbDelete.Image = ((System.Drawing.Image)(resources.GetObject("tsbDelete.Image")));
+            this.tsbDelete.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbDelete.Margin = new System.Windows.Forms.Padding(0);
+            this.tsbDelete.Name = "tsbDelete";
+            this.tsbDelete.Size = new System.Drawing.Size(48, 56);
+            this.tsbDelete.Text = "Delete";
+            this.tsbDelete.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.tsbDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsbDelete.ToolTipText = "Delete User";
+            // 
+            // tsbClose
+            // 
+            this.tsbClose.Image = global::FertilizerProject.Properties.Resources.Remove;
+            this.tsbClose.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbClose.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbClose.Name = "tsbClose";
+            this.tsbClose.Size = new System.Drawing.Size(48, 53);
+            this.tsbClose.Text = "Close";
+            this.tsbClose.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.tsbClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsbClose.ToolTipText = "Close User";
             // 
             // frmEditUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(730, 440);
-            this.ControlBox = false;
             this.Controls.Add(this.pnlMain);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "frmEditUser";
             this.ShowInTaskbar = false;
             this.Text = "Edit User";
             this.Load += new System.EventHandler(this.frmEditUser_Load);
             this.pnlMain.ResumeLayout(false);
+            this.pnlOther.ResumeLayout(false);
             this.pnlContent.ResumeLayout(false);
             this.grpBoxUsers.ResumeLayout(false);
             this.grpBoxUsers.PerformLayout();
             this.pnlTreeView.ResumeLayout(false);
+            this.pnlTopManuStrip.ResumeLayout(false);
+            this.pnlTopManuStrip.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -252,6 +351,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtUserID;
         private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Panel pnlTopManuStrip;
+        private System.Windows.Forms.Panel pnlOther;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton tsbClose;
+        private System.Windows.Forms.ToolStripButton tsbNew;
+        private System.Windows.Forms.ToolStripButton tsbModify;
+        private System.Windows.Forms.ToolStripButton tsbDelete;
 
     }
 }

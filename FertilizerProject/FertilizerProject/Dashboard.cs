@@ -23,7 +23,7 @@ namespace FertilizerProject
         {
             frmEditUser frm = new frmEditUser();
             frm.MdiParent = this;
-            frm.Dock = DockStyle.Fill;
+            //frm.Dock = DockStyle.Fill;
             frm.Show();
         }
 
@@ -31,7 +31,7 @@ namespace FertilizerProject
         {
             frmEditFertilizer frm = new frmEditFertilizer();
             frm.MdiParent = this;
-            frm.Dock = DockStyle.Fill;
+            //frm.Dock = DockStyle.Fill;
             frm.Show();
         }
 
@@ -39,7 +39,7 @@ namespace FertilizerProject
         {
             frmViewFertilizer frm = new frmViewFertilizer();
             frm.MdiParent = this;
-            frm.Dock = DockStyle.Fill;
+            //frm.Dock = DockStyle.Fill;
             frm.Show();
         }
 
@@ -47,7 +47,7 @@ namespace FertilizerProject
         {
             frmViewUsers frm = new frmViewUsers();
             frm.MdiParent = this;
-            frm.Dock = DockStyle.Fill;
+            //frm.Dock = DockStyle.Fill;
             frm.Show();
         }
 
@@ -55,7 +55,7 @@ namespace FertilizerProject
         {
             frmViewCustomer frm = new frmViewCustomer();
             frm.MdiParent = this;
-            frm.Dock = DockStyle.Fill;
+            //frm.Dock = DockStyle.Fill;
             frm.Show();
         }
 
@@ -63,7 +63,7 @@ namespace FertilizerProject
         {
             frmEditCustomer frm = new frmEditCustomer();
             frm.MdiParent = this;
-            frm.Dock = DockStyle.Fill;
+            //frm.Dock = DockStyle.Fill;
             frm.Show();
         }
 
@@ -71,7 +71,20 @@ namespace FertilizerProject
         {
             ServerSettings frm = new ServerSettings();
             frm.MdiParent = this;
-            frm.Dock = DockStyle.Fill;
+            //frm.Dock = DockStyle.Fill;
+            frm.Show();
+        }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TSMI_GoInvoice_Click(object sender, EventArgs e)
+        {
+            frmGoInvoice frm = new frmGoInvoice();
+            frm.MdiParent = this;
+            //frm.Dock = DockStyle.Fill;
             frm.Show();
         }
     }
