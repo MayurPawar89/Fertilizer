@@ -36,6 +36,12 @@
             this.txtFertilizerPrice = new System.Windows.Forms.TextBox();
             this.pnlContent = new System.Windows.Forms.Panel();
             this.grpBoxFertilizer = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtFertilizerUsage = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtFertilizerDiscount = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.txtFertilizerQuantity = new System.Windows.Forms.TextBox();
             this.txtFertilizerCompanyName = new System.Windows.Forms.TextBox();
             this.txtFertilizerName = new System.Windows.Forms.TextBox();
@@ -44,12 +50,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlMain = new System.Windows.Forms.Panel();
-            this.txtFertilizerDiscount = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtFertilizerUsage = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.cmb = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.pnlTreeView.SuspendLayout();
             this.pnlContent.SuspendLayout();
             this.grpBoxFertilizer.SuspendLayout();
@@ -85,7 +87,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(249, 307);
+            this.btnCancel.Location = new System.Drawing.Point(223, 298);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 23;
@@ -95,7 +97,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(168, 307);
+            this.btnUpdate.Location = new System.Drawing.Point(142, 298);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnUpdate.TabIndex = 22;
@@ -105,7 +107,7 @@
             // 
             // txtFertilizerPrice
             // 
-            this.txtFertilizerPrice.Location = new System.Drawing.Point(168, 154);
+            this.txtFertilizerPrice.Location = new System.Drawing.Point(142, 154);
             this.txtFertilizerPrice.Name = "txtFertilizerPrice";
             this.txtFertilizerPrice.Size = new System.Drawing.Size(85, 20);
             this.txtFertilizerPrice.TabIndex = 20;
@@ -121,6 +123,8 @@
             // 
             // grpBoxFertilizer
             // 
+            this.grpBoxFertilizer.Controls.Add(this.cmb);
+            this.grpBoxFertilizer.Controls.Add(this.label9);
             this.grpBoxFertilizer.Controls.Add(this.label8);
             this.grpBoxFertilizer.Controls.Add(this.label7);
             this.grpBoxFertilizer.Controls.Add(this.txtFertilizerUsage);
@@ -146,23 +150,74 @@
             this.grpBoxFertilizer.TabStop = false;
             this.grpBoxFertilizer.Text = "groupBox1";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(409, 157);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(15, 13);
+            this.label8.TabIndex = 32;
+            this.label8.Text = "%";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(230, 157);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(20, 13);
+            this.label7.TabIndex = 31;
+            this.label7.Text = "Rs";
+            // 
+            // txtFertilizerUsage
+            // 
+            this.txtFertilizerUsage.Location = new System.Drawing.Point(143, 217);
+            this.txtFertilizerUsage.Multiline = true;
+            this.txtFertilizerUsage.Name = "txtFertilizerUsage";
+            this.txtFertilizerUsage.Size = new System.Drawing.Size(216, 64);
+            this.txtFertilizerUsage.TabIndex = 30;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(92, 220);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 13);
+            this.label6.TabIndex = 29;
+            this.label6.Text = "Usage :";
+            // 
+            // txtFertilizerDiscount
+            // 
+            this.txtFertilizerDiscount.Location = new System.Drawing.Point(330, 154);
+            this.txtFertilizerDiscount.Name = "txtFertilizerDiscount";
+            this.txtFertilizerDiscount.Size = new System.Drawing.Size(73, 20);
+            this.txtFertilizerDiscount.TabIndex = 28;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(269, 157);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(55, 13);
+            this.label5.TabIndex = 27;
+            this.label5.Text = "Discount :";
+            // 
             // txtFertilizerQuantity
             // 
-            this.txtFertilizerQuantity.Location = new System.Drawing.Point(168, 120);
+            this.txtFertilizerQuantity.Location = new System.Drawing.Point(142, 120);
             this.txtFertilizerQuantity.Name = "txtFertilizerQuantity";
             this.txtFertilizerQuantity.Size = new System.Drawing.Size(155, 20);
             this.txtFertilizerQuantity.TabIndex = 19;
             // 
             // txtFertilizerCompanyName
             // 
-            this.txtFertilizerCompanyName.Location = new System.Drawing.Point(168, 87);
+            this.txtFertilizerCompanyName.Location = new System.Drawing.Point(142, 87);
             this.txtFertilizerCompanyName.Name = "txtFertilizerCompanyName";
             this.txtFertilizerCompanyName.Size = new System.Drawing.Size(155, 20);
             this.txtFertilizerCompanyName.TabIndex = 18;
             // 
             // txtFertilizerName
             // 
-            this.txtFertilizerName.Location = new System.Drawing.Point(168, 58);
+            this.txtFertilizerName.Location = new System.Drawing.Point(142, 58);
             this.txtFertilizerName.Name = "txtFertilizerName";
             this.txtFertilizerName.Size = new System.Drawing.Size(155, 20);
             this.txtFertilizerName.TabIndex = 17;
@@ -170,7 +225,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(93, 157);
+            this.label4.Location = new System.Drawing.Point(77, 157);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 13);
             this.label4.TabIndex = 15;
@@ -179,7 +234,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(106, 123);
+            this.label3.Location = new System.Drawing.Point(90, 123);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 13);
             this.label3.TabIndex = 14;
@@ -188,7 +243,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 90);
+            this.label2.Location = new System.Drawing.Point(7, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(129, 13);
             this.label2.TabIndex = 13;
@@ -197,7 +252,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(70, 61);
+            this.label1.Location = new System.Drawing.Point(54, 61);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 13);
             this.label1.TabIndex = 12;
@@ -213,56 +268,28 @@
             this.pnlMain.Size = new System.Drawing.Size(637, 448);
             this.pnlMain.TabIndex = 2;
             // 
-            // txtFertilizerDiscount
+            // cmb
             // 
-            this.txtFertilizerDiscount.Location = new System.Drawing.Point(168, 267);
-            this.txtFertilizerDiscount.Name = "txtFertilizerDiscount";
-            this.txtFertilizerDiscount.Size = new System.Drawing.Size(85, 20);
-            this.txtFertilizerDiscount.TabIndex = 28;
+            this.cmb.FormattingEnabled = true;
+            this.cmb.Items.AddRange(new object[] {
+            "None",
+            "All",
+            "Seed",
+            "Pestiside",
+            "Fertilizer"});
+            this.cmb.Location = new System.Drawing.Point(142, 185);
+            this.cmb.Name = "cmb";
+            this.cmb.Size = new System.Drawing.Size(126, 21);
+            this.cmb.TabIndex = 70;
             // 
-            // label5
+            // label9
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(97, 270);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 13);
-            this.label5.TabIndex = 27;
-            this.label5.Text = "Discount :";
-            // 
-            // txtFertilizerUsage
-            // 
-            this.txtFertilizerUsage.Location = new System.Drawing.Point(169, 186);
-            this.txtFertilizerUsage.Multiline = true;
-            this.txtFertilizerUsage.Name = "txtFertilizerUsage";
-            this.txtFertilizerUsage.Size = new System.Drawing.Size(216, 64);
-            this.txtFertilizerUsage.TabIndex = 30;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(108, 189);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 13);
-            this.label6.TabIndex = 29;
-            this.label6.Text = "Usage :";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(259, 157);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(20, 13);
-            this.label7.TabIndex = 31;
-            this.label7.Text = "Rs";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(259, 270);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(15, 13);
-            this.label8.TabIndex = 32;
-            this.label8.Text = "%";
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(100, 188);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(37, 13);
+            this.label9.TabIndex = 69;
+            this.label9.Text = "Type :";
             // 
             // frmEditFertilizer
             // 
@@ -306,5 +333,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cmb;
+        private System.Windows.Forms.Label label9;
     }
 }

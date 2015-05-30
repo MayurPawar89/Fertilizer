@@ -194,6 +194,52 @@ namespace FertilizerProject.App_Data
             return _result;
         }
 
+        public int Execute(string StoredProcedureName, out object ParameterValue)
+        {
+            int _result = 0;
+            SqlCommand _sqlcommand = new SqlCommand();
+           
+            try
+            {
+                _sqlcommand.CommandType = CommandType.StoredProcedure;
+                _sqlcommand.CommandText = StoredProcedureName;
+                _sqlcommand.Connection = _con;
+
+                if (_WithTrn == true)
+                {
+                    _sqlcommand.Transaction = _Trn;
+                }
+
+                _result = _sqlcommand.ExecuteNonQuery();
+
+                if (_sqlcommand.Parameters[0].Value != null)
+                {
+                    ParameterValue = _sqlcommand.Parameters[0].Value;
+                }
+                else
+                {
+                    ParameterValue = 0;
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                if (_WithTrn == true)
+                {
+                    _Trn.Rollback();
+                }
+                throw ex;
+            }
+            finally
+            {
+                if (_sqlcommand != null)
+                {
+                    _sqlcommand.Dispose();
+                }
+            }
+            return _result;
+        }
         public int Execute(string StoredProcedureName, DBParameters Parameters, out object ParameterValue)
         {
             int _result = 0;

@@ -47,7 +47,7 @@ namespace FertilizerProject.App_Data
         public string sFertCompany { get; set; }
 
         public Decimal nQuntity { get; set; }
-
+        public Int64 nTypeID { get; set; }
         public Decimal nUnitPrice { get; set; }
 
         public string sFertUsage { get; set; }
@@ -74,6 +74,7 @@ namespace FertilizerProject.App_Data
                 _DBParameters.Add("@sFertName", this.sFertName, ParameterDirection.Input, SqlDbType.VarChar);
                 _DBParameters.Add("@sFertCompany", this.sFertCompany, ParameterDirection.Input, SqlDbType.VarChar);
                 _DBParameters.Add("@nQuntity", this.nQuntity, ParameterDirection.Input, SqlDbType.Decimal);
+                _DBParameters.Add("@nTypeID", this.nTypeID, ParameterDirection.Input, SqlDbType.Int);
                 _DBParameters.Add("@nUnitPrice", this.nUnitPrice, ParameterDirection.Input, SqlDbType.Decimal);
                 _DBParameters.Add("@sFertUsage", this.sFertUsage, ParameterDirection.Input, SqlDbType.VarChar);
                 _DBParameters.Add("@nDiscount", this.nDiscount, ParameterDirection.Input, SqlDbType.Decimal);
@@ -115,6 +116,57 @@ namespace FertilizerProject.App_Data
                 _DBParameters.clear();
                 _DBParameters.Add("@nFertID", FertID, ParameterDirection.Input, SqlDbType.BigInt);
                 _DataAccess.Retrive("gsp_GetFertilizer", _DBParameters, out _dt);
+
+                _DataAccess.CloseConnection(false);
+            }
+            catch (Exception)
+            {
+                if (_DataAccess != null) { _DataAccess.RollBack(); _DataAccess.CloseConnection(false); }
+            }
+            finally
+            {
+                if (_DBParameters != null) { _DBParameters.Dispose(); }
+            }
+            return _dt;
+        }
+
+        public DataTable GetFertilizerByType(Int64 TypeID = 0)
+        {
+            DataTable _dt = null;
+
+            DBParameters _DBParameters = new DBParameters();
+            DataAccess _DataAccess = new DataAccess();
+            try
+            {
+                _DataAccess.OpenConnection(false);
+                _DBParameters.clear();
+                _DBParameters.Add("@nTypeID", TypeID, ParameterDirection.Input, SqlDbType.BigInt);
+                _DataAccess.Retrive("gsp_GetFertilizerByType", _DBParameters, out _dt);
+
+                _DataAccess.CloseConnection(false);
+            }
+            catch (Exception)
+            {
+                if (_DataAccess != null) { _DataAccess.RollBack(); _DataAccess.CloseConnection(false); }
+            }
+            finally
+            {
+                if (_DBParameters != null) { _DBParameters.Dispose(); }
+            }
+            return _dt;
+        }
+        public DataTable GetItemList(Int64 TypeID = 0)
+        {
+            DataTable _dt = null;
+
+            DBParameters _DBParameters = new DBParameters();
+            DataAccess _DataAccess = new DataAccess();
+            try
+            {
+                _DataAccess.OpenConnection(false);
+                _DBParameters.clear();
+                _DBParameters.Add("@nTypeID", TypeID, ParameterDirection.Input, SqlDbType.BigInt);
+                _DataAccess.Retrive("gsp_GetItemList", _DBParameters, out _dt);
 
                 _DataAccess.CloseConnection(false);
             }
