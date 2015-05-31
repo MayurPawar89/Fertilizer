@@ -105,6 +105,7 @@ namespace FertilizerProject.App_Data
                 _DBParameters.Add("@nPaidAmount", this.nPaidAmount, ParameterDirection.Input, SqlDbType.Decimal);
                 _DBParameters.Add("@nBalanceAmount", this.nBalanceAmount, ParameterDirection.Input, SqlDbType.Decimal);
                 _DBParameters.Add("@nTotalAmount", this.nTotalAmount, ParameterDirection.Input, SqlDbType.Decimal);
+                _DBParameters.Add("@nSalesDetailID", this.nSalesDetailID, ParameterDirection.Input, SqlDbType.BigInt);
                 _DBParameters.Add("@sFertCompany", this.sFertCompany, ParameterDirection.Input, SqlDbType.VarChar);
                 _DBParameters.Add("@nQuntity", this.nQuntity, ParameterDirection.Input, SqlDbType.Decimal);
                 _DBParameters.Add("@nUnitPrice", this.nUnitPrice, ParameterDirection.Input, SqlDbType.Decimal);

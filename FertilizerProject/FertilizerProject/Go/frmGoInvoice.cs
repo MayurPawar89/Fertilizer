@@ -189,7 +189,7 @@ namespace FertilizerProject
                     foreach (DataRow dr in _dtFertilizer.Rows)
                     {
                         txtFertCompany.Text = Convert.ToString(dr["sFCompany"]);
-                        txtFertQuantity.Text = Convert.ToString(dr["nQuantity"]);
+                        txtFertAvailableQuntity.Text = Convert.ToString(dr["nQuantity"]);
                         txtFertUnitPrice.Text = Convert.ToString(dr["nPrice"]);
                         txtFertDiscount.Text = Convert.ToString(dr["nDiscount"]);
                     }
@@ -199,11 +199,7 @@ namespace FertilizerProject
 
         private void btnAddInCart_Click(object sender, EventArgs e)
         {
-            decimal _nBasicPrice = 0,_nDiscountAmt=0,_nFinalamt=0;
-
-            _nBasicPrice = Convert.ToDecimal(txtFertQuantity.Text) * Convert.ToDecimal(txtFertUnitPrice.Text);
-            _nDiscountAmt = _nBasicPrice * (Convert.ToDecimal(txtFertDiscount.Text) / 100);
-            _nFinalamt = _nBasicPrice - _nDiscountAmt;
+            
 
             DataRow dr = _dtInvoiveTable.NewRow();
            
@@ -211,8 +207,8 @@ namespace FertilizerProject
             dr["Quantity"] = txtFertDiscount.Text;
             dr["UnitPrice"] = txtFertUnitPrice.Text;
             dr["Discount"] = txtFertDiscount.Text;
-            dr["BasicPrice"] = _nBasicPrice;
-            dr["Amount"] = _nFinalamt;
+            dr["BasicPrice"] = txtFertAmount.Text;
+            dr["Amount"] = txtFertDiscountAmount.Text;
 
             _dtInvoiveTable.Rows.Add(dr);
 
@@ -244,6 +240,51 @@ namespace FertilizerProject
         private void btnClear_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnInvoiceSave_Click(object sender, EventArgs e)
+        {
+            FertilizerSales _Sales = new FertilizerSales();
+            _Sales.nSalesID = 0;
+            _Sales.sInvoiceNo = txtInvoiceNo.Text;
+            _Sales.dtInvoiceDate = Convert.ToDateTime(dtpInvoiceDate.Text);
+            _Sales.nUserID = 106173476718006097;
+            _Sales.nTypeID = Convert.ToInt32(cmbFertItem.SelectedValue);
+            _Sales.nFertID = Convert.ToInt64(cmbFertilizerList.SelectedValue);
+            _Sales.nCustID = Convert.ToInt64(cmbCustomer.SelectedValue);
+            _Sales.byteimage = 0;
+            _Sales.nPaymentType = Convert.ToInt32(cmbPaymentMode.SelectedValue);
+            _Sales.nNetAmount = Convert.ToDecimal(txtNetAmount.Text);
+            _Sales.nPaidAmount = Convert.ToDecimal(txtPaidAmount.Text);
+            _Sales.nBalanceAmount = Convert.ToDecimal(txtBalanceAmount.Text);
+            _Sales.nTotalAmount = Convert.ToDecimal(txtTotalAmount.Text);
+            _Sales.nSalesDetailID = 0;
+            _Sales.sFertCompany = txtFertCompany.Text;
+            _Sales.nQuntity = Convert.ToDecimal(txtFertQuantity.Text);
+            _Sales.nUnitPrice = Convert.ToDecimal(txtFertUnitPrice.Text);
+            _Sales.nDiscount = Convert.ToDecimal(txtFertDiscount.Text);
+            _Sales.nAmount = Convert.ToDecimal(txtFertAmount.Text);
+            _Sales.InsertUpdateSales();
+        }
+
+        private void txtFertQuantity_TextChanged(object sender, EventArgs e)
+        {
+            if (txtFertQuantity.Text.Trim()!="0")
+            {
+                decimal _nBasicPrice = 0, _nDiscountAmt = 0, _nFinalamt = 0;
+
+                _nBasicPrice = Convert.ToDecimal(txtFertQuantity.Text) * Convert.ToDecimal(txtFertUnitPrice.Text);
+                _nDiscountAmt = _nBasicPrice * (Convert.ToDecimal(txtFertDiscount.Text) / 100);
+                _nFinalamt = _nBasicPrice - _nDiscountAmt;
+
+                txtFertAmount.Text = _nFinalamt.ToString();
+                txtFertDiscountAmount.Text = _nDiscountAmt.ToString();
+            }
+            else
+            {
+                txtFertAmount.Text = "0.00";
+                txtFertDiscountAmount.Text = "0.00";
+            }
         }
     }
 }
