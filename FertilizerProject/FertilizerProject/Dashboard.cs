@@ -87,5 +87,10 @@ namespace FertilizerProject
             //frm.Dock = DockStyle.Fill;
             frm.Show();
         }
+
+        private void TSMI_Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

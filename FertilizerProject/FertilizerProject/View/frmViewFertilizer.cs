@@ -20,7 +20,7 @@ namespace FertilizerProject
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
