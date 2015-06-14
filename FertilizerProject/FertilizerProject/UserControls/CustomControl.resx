@@ -117,32 +117,71 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Remove" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Remove.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="tsbModify.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAmCAYAAADTGStiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAXPSURBVFhHxZeJT1RXFIffH9Naty4ube1mm9i6AsPAoAPC
+        2NJgrTVqa01lB3EBXBFFasumIApScLctKvtMYwJVqgGptqLiwlJEYHZ+Pee+uY9hkhpoJuEkv7xhu9/7
+        7rnvvosy7AAmI8qQHZiMKIMEnowoz+1uTDR3Oh/iwvnzyMvLw937XXjaPzjhMZQBmxsTSeedm9h/uAD5
+        BYWIjolB66123LjZjntd3RMaR3lGYJm7HTdw4chmHEtaiqOJlIQlKEpYjMJ4StwitHd0oKC4HKdPV6K5
+        uQXtt2/jVHkFTlWdQVdPDw5v/Ag5Gz7EofXzcXDdB8j+6n0cWPseipIjcN1crXGYp/Rb3ZCpOrAGv+wL
+        Q9P3K9GUuxKNuRFoPByBBkppWQU2ro7GwEA/fGtkxI1Na6JRXlGFX/cvF+Fxft4bhkt7DahIC0TW2vl4
+        0vdcYyn9wwT2pHSbQUB8oXmVNSgsOo7Sk+WI2xIH0yoTYmiaOSaTCYmJ8Sg5UY6CoyUoq74+BnpxjwEX
+        doci+8t30dbWprHGgI+nETiHLMlUVkF+GeYvWAiDIRR6nQ7G8HBERkUhMjJSDX02GsOho5+FhgQjMDAA
+        6+LTtb9n6Pldocha8w5aWlr+A7w1FPU54WJ6ZbW2tuL/RP49Q89R9n8xD9euXRsF9w25IFPC4EPhYrq5
+        RkZGRNxuN0Yobrf6WY1LXF10dbnUOF1OOJ1O+sxX2hKpGHo2MwT7Vs+DxWLRWErvkBMyJakhqCNwPU23
+        5dbffglDz2SEYG/M22iymDWW0jtIYE+KU/SoPcjgcM3YTStWNRy1dY0xJTuPKVvKOByqMUNPZ+ix5/O3
+        0GQmsIel9Ay6IHMsmcFGYe0vY4ZWpeuxO/pNNJotGkvppjuQOZoUjJpsI2oJzDVqST0Ull49dXJPR/vq
+        JEMHGbOp3WEX4WJo5c5g7PpsLoHNGkt5OuCETFGSDlcJXEPW/jJmaOWOYGR+OhcNjWaNpTx97oJMUaIO
+        Vw6sEGDV2GPpWbXa6qWVy6tXjWqpxg6HnWxFbGIMhv5EyTDNQUOTRWMpT8hYpjBBBbO1v4wZWrFdh/So
+        2agnY8lSHg84IFMQH4TLWSsEnEsajl69LHkFk6XoraenqinFZhPhYuipbTrsjJyFusYmjaU8fuaETH5c
+        IKppg79MYH8ZM7ScsmPlG6hrMGss5dEzB2TyYwPEm6U6a/moMa1el3dPfSwd1Eu1r6ql3WaFja42unIx
+        tCwtCNsjXkdtfZPGGgPO27JMvFkY7i9jhnK2hb+GGm9wV78DMj9+t1S8Qxkseuy1ckefU1q5/Kx6LG1k
+        yoZsy5YiViusFC6GntwaiDQjgesaNZbS9Y8dMj9sVsFs7S9jhp5IZfCrBG7QWIq38ZFvl+ASvbgZziX2
+        XfmMsiGvXu6ljLD0MSVjq3VYhIuhpZStK2aONX5IxjK5mxbj4m6DOK74y5ihpSkBSF0+A1fJWLJoqqnH
+        nuR+s0gcU/i4wiV3I7n3SlPfnnI/rR7T4eFhqBkSYzD0OCUljMC1BO4jUYribZzz9UI6poQIuL+MGVqS
+        HIBkw/Sxxg97bZA5tOETnMvUizMSl7YT8cr1rF6bXT6n1Eeb2kth7DHlK3+PrbkYKsCh03C1how9POVB
+        nw0yB9d/jLP0/uTjir+KocXJy5AkwXKqH/QQ2JPs9QvoxKAXZyR5cpDvU/mWkXuv3JHkcypXr+ypNGVo
+        cRKBQ6bhypUGjaXcJ3WZvGQTiuMX+R3K/2HEBk2DpbkND3rtIsr9Hitkfm9uxpFYIzLptJCxag7STbOx
+        M2qW2OB5r+VtjzcCfiZTw2YixTCDejdd2CTqpyIheCrida8gPmgK4gKnIDbwZcQGvIS4sLnIz9mHP/58
+        pLGUTgJ7569HA+IXfrveATPdoT/CY/GYPLaUJGMbOrsJPp743KTvTU/kazKeJPA9Mn1RxjUTYrZYYPxR
+        xj/wi9txr3uYBMaffwHtZ0nxUq+iXAAAAABJRU5ErkJggg==
+</value>
   </data>
-  <data name="Agriculture" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Agriculture.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tsbDelete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJrSURBVFhH7Za/S3JRHMbVFMEhXR0UFycdAgdtUBBqkUBC
+        hP6ChgYRMhKEhhRxVHdFpRKnKLUfS6hRpC2BP+YER8FJdBCeOF8w3uJ9ITjXlxucAxe/ohw/9+Nzn3sV
+        +GVL8ct4IYBX/Y8Jw8LwNwMiEiISIhKrzoAw/IeB8XiMfr+PXq+H0Wi0EveS1lomk4HNZoPVasXBwYH8
+        gJnNq6sr1Ot13N7eotFo4OXlBe12G61WC3d3d/RZrVbDzc0NJpMJ90lwGQ4EAlAoFD8+2MnxLi7g6XSK
+        brdLVjudzl8PZvv5+RnD4RCLxYKXl/952O/3k2G1Wk2vKpXqc1YqlZ9ztVrlhmUbcBlmG/h8PhiNRuzs
+        7BCwy+X6nB0OB5axub+/lwfw7u4uvF4vXVRra2s4PT1FqVQi+HQ6jevra5ofHx/lARwMBrG1tUU51Wq1
+        SCQSKBaLBHl2dobLy0ua397e5AG8v7+P7e1tPD09EXA8HkehUCDI8/NzVCoVmgeDgTyAQ6EQPB4PNcX6
+        +jpFYgnMYPP5PAG/v7/LA/jk5ASbm5uUUYPB8AW4XC6D3f0YMKs1KRZ3S6RSKTidTjw8PECv138BZne4
+        ZDJJwLPZTApe/lrLZrNg9dVsNmEymeiiW7YE695oNArWx1ItbsMXFxf0wMPqy2KxIBaLIZfLkVUGvLe3
+        B7PZLBUvv2H20KPT6bCxsUEmGbTdbidgt9sNjUZDtSfV4jY8n8/BYhEOh3F8fIyjoyNEIhGaDw8P6f3r
+        66tUvPyGJSP54Ubchn/4O5J9TQBLpvIfGwnDwvA3AyISIhIiEqvOgDD8nw1/ALCi9CwZ5nGXAAAAAElF
+        TkSuQmCC
+</value>
   </data>
-  <data name="agriculture_green_nature" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\agriculture_green_nature.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="banner_agriculture" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\banner_agriculture.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="agri11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\agri11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="New" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\New.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MyNew" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MyNew.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Modify" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Modify.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MyNew1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MyNew.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="toolStripButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIISURBVDhPpZP7S1NxGMbPPxKaXVUkMEq8IpKUCoY/hGgI
+        ymqkDYYXcCjDZOANURSjCNGFQUTsl4GXVMxKk62YU4fXQpaIlygHQxBRH8/zwvyaIAYe+HLgnPN8nue9
+        HA3nvDTq63oW/jm13XOwvPTB3DYFY5MH+bXfcN8ygfTSMSSXfESicQDxBqdYHwH29g9w2tnZ3UcguIvN
+        rR3417exuBJE5N1n/wfwLgXEOc38Bc6xNRHb+/y4nm49G0Bnit2zf9H6bkliE/jKuYxrd6oVgDWfjB+K
+        TWeKMyrGEVfowITvD9re/9ABVQrAhh0HHK+ZselMMaN/mvwtDb+aVqkA7HYIwIj3ysfluPTorJnP6Ezx
+        oHsD1s5ZXEktUwCOioB5f1CEPR9+wTG6iuiserTo8dkwng7HT/R+XUPF8xlcTjErAOdMcW6NW8STiwG8
+        7vej8oUPN/PsEv3t8Ao0TZP3T1u8uJRkUgAuSYHtO97oLxmXd5t9Ho8aPTK+GzntqNfrLm2fFoihwYOI
+        xGIF4KjoGBLzY1OrF9k6OOFxnwDC4wxIMX1G0pMhgVyMNyoA13PAtS7OrJk1PrC69LUdQWxuF6IybHrX
+        LRI7JrtZdoDAo1XmbjMyD+tjSXxGcXRmnYg5ttD9QuxDhN0uUgDOmbvNTpPOJaGAo2K36cyaGZvOFIfd
+        KlSA8/zRh9ABIDUG+1JpAAAAAElFTkSuQmCC
+</value>
   </data>
 </root>

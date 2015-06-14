@@ -68,6 +68,12 @@
     <Compile Include="App_Data\Fertilizer.cs" />
     <Compile Include="App_Data\FertilizerSales.cs" />
     <Compile Include="App_Data\User.cs" />
+    <Compile Include="UserControls\CustomControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CustomControl.Designer.cs">
+      <DependentUpon>CustomControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="UserControls\CustomControl.resx">
+      <DependentUpon>CustomControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -206,6 +215,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Modify.png" />
+    <None Include="Resources\MyNew.png" />
     <Content Include="Resources\New.png" />
     <Content Include="Resources\Remove.png" />
   </ItemGroup>
