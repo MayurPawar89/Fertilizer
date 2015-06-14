@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="MyNew1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MyNew.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Remove" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Remove.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -133,6 +136,9 @@
   <data name="agri11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\agri11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="MySave" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MySave.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="New" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\New.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -142,7 +148,7 @@
   <data name="Modify" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Modify.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MyNew1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MyNew.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MySave1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MySave.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -31,7 +31,7 @@ namespace FertilizerProject
                 _customer.sCity = txtCity.Text.Trim();
                 _customer.sEmail = txtEmail.Text.Trim();
                 _customer.sPhoneNo = txtPhoneNo.Text.Trim();
-                _customer.dtDOB = Convert.ToDateTime(txtDOB.Text.Trim());
+                _customer.dtDOB = Convert.ToDateTime(dateTimePicker1.Text.Trim());
                 _customer.InsertUpdateCustomer();
             }
             catch (Exception ex)
@@ -51,6 +51,31 @@ namespace FertilizerProject
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void customControl1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

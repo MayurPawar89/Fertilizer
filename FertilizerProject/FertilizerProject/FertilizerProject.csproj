@@ -216,6 +216,7 @@
   <ItemGroup>
     <Content Include="Resources\Modify.png" />
     <None Include="Resources\MyNew.png" />
+    <None Include="Resources\MySave.png" />
     <Content Include="Resources\New.png" />
     <Content Include="Resources\Remove.png" />
   </ItemGroup>

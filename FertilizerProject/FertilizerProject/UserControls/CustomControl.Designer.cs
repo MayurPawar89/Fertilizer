@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomControl));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbNew = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.tsbModify = new System.Windows.Forms.ToolStripButton();
             this.tsbDelete = new System.Windows.Forms.ToolStripButton();
             this.tsbClose = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,10 +44,10 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 16);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbNew,
+            this.toolStripButton1,
             this.tsbModify,
             this.tsbDelete,
-            this.tsbClose,
-            this.toolStripButton1});
+            this.tsbClose});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(373, 96);
@@ -69,6 +69,21 @@
             this.tsbNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tsbNew.ToolTipText = "New User";
             this.tsbNew.Click += new System.EventHandler(this.tsbNew_Click);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.AutoSize = false;
+            this.toolStripButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.toolStripButton1.Image = global::FertilizerProject.Properties.Resources.MySave;
+            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(49, 85);
+            this.toolStripButton1.Text = "Save";
+            this.toolStripButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton1.ToolTipText = "New User";
             // 
             // tsbModify
             // 
@@ -108,15 +123,6 @@
             this.tsbClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tsbClose.ToolTipText = "Close User";
             this.tsbClose.Click += new System.EventHandler(this.tsbClose_Click);
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(24, 93);
-            this.toolStripButton1.Text = "toolStripButton1";
             // 
             // CustomControl
             // 
