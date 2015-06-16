@@ -27,7 +27,7 @@ namespace FertilizerProject.Edit
                 _Customer.nCustID = Convert.ToInt64(txtUserID.Text);
                 _Customer.sFirstName = txtFirstName.Text.Trim();
                 _Customer.sLastName = txtLastName.Text.Trim();
-                _Customer.sEmail = txtEmail.Text.Trim();
+                _Customer.sEmailid  = txtEmail.Text.Trim();
                 _Customer.sAddress = txtAddress.Text.Trim();
                 _Customer.sPhoneNo = txtPhoneNo.Text.Trim();
                 _Customer.sCity = txtCity.Text.Trim();

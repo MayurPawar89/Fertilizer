@@ -23,15 +23,29 @@ namespace FertilizerProject
             Customer _customer = null;
             try
             {
+                //nCustID,sFirstName,sLastName,sAddress,sPhoneNo, sTaluka, 
+                //sDistrict, sState, nPincode, 
+                //sGroup, sCategory, nPhone, sEmailid, sCity, sDob, nOpeningBal, nClosingBal
+			//nCreditBal, nInterestRate, dtCreatedate, dtModifieddate
                 _customer = new Customer();
-                _customer.nCustID = Convert.ToInt64(txtCustomerID.Text);
+                _customer.nCustID = 0;//Convert.ToInt64(txtCustomerID.Text);
                 _customer.sFirstName = txtFirstName.Text.Trim();
                 _customer.sLastName = txtLastName.Text.Trim();
                 _customer.sAddress = txtAddress.Text.Trim();
-                _customer.sCity = txtCity.Text.Trim();
-                _customer.sEmail = txtEmail.Text.Trim();
                 _customer.sPhoneNo = txtPhoneNo.Text.Trim();
-                _customer.dtDOB = Convert.ToDateTime(dateTimePicker1.Text.Trim());
+                _customer.sTaluka = cmb1.Text.Trim();
+                _customer.sDistrict = cmb2.Text.Trim();
+                _customer.sState = cmb3.Text.Trim();
+                _customer.nPincode = Convert.ToInt64(cmb4.Text);
+                _customer.sGroup = cmb5.Text.Trim();
+                _customer.sCategory = cmb6.Text.Trim();
+                _customer.sEmailid = txtEmail.Text.Trim();
+                _customer.sCity = txtCity.Text.Trim();
+                _customer.dtDOB = Convert.ToDateTime(dob.Text.Trim());
+                _customer.nOpeningBal = Convert.ToInt64(txtOpening.Text);
+                _customer.nClosingBal = Convert.ToInt64(txtClosing.Text);
+                _customer.nInterestRate = Convert.ToInt64(txtInterest.Text);
+
                 _customer.InsertUpdateCustomer();
             }
             catch (Exception ex)

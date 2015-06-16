@@ -41,20 +41,28 @@ namespace FertilizerProject.App_Data
 
         #region "Properties"
         public Int64 nCustID { get; set; }
-
         public string sFirstName { get; set; }
-
         public string sLastName { get; set; }
-
         public string sAddress { get; set; }
-
         public string sPhoneNo { get; set; }
-
-        public string sEmail { get; set; }
-
+        public string sTaluka { get; set; }
+        public Int64 nPincode { get; set; }
+        public string sDistrict { get; set; }
+        public string sState { get; set; }
+        public string sGroup { get; set; }
+        public string sCategory { get; set; }
+        public string sEmailid { get; set; }
         public string sCity { get; set; }
-
         public DateTime dtDOB { get; set; }
+        public Int64 nOpeningBal { get; set; }
+        public Int64 nClosingBal { get; set; }
+        public Int64 nCreditBal { get; set; }
+        public Int64 nInterestRate { get; set; }
+        public string dtCreatedate { get; set; }
+        public string dtModifieddate { get; set; }
+        
+         //sTaluka, sDistrict, sState, nPincode, sGroup, sCategory, nPhone, sEmailid, sCity, sDob, nOpeningBal, nClosingBal
+			//nCreditBal, nInterestRate, dtCreatedate, dtModifieddate
         #endregion
 
         #region"Methods"
@@ -70,16 +78,26 @@ namespace FertilizerProject.App_Data
                 _DataAccess = new DataAccess();
 
                 _DataAccess.OpenConnection(false);
-
+               
                 _DBParameters.clear();
                 _DBParameters.Add("@nCustID", this.nCustID, ParameterDirection.InputOutput, SqlDbType.BigInt);
                 _DBParameters.Add("@sFirstName", this.sFirstName, ParameterDirection.Input, SqlDbType.VarChar);
                 _DBParameters.Add("@sLastName", this.sLastName, ParameterDirection.Input, SqlDbType.VarChar);
                 _DBParameters.Add("@sAddress", this.sAddress, ParameterDirection.Input, SqlDbType.VarChar);
                 _DBParameters.Add("@sPhoneNo", this.sPhoneNo, ParameterDirection.Input, SqlDbType.VarChar);
-                _DBParameters.Add("@sEmail", this.sEmail, ParameterDirection.Input, SqlDbType.VarChar);
+                _DBParameters.Add("@sTaluka", this.sTaluka, ParameterDirection.Input, SqlDbType.VarChar);
+                _DBParameters.Add("@sDistrict", this.sDistrict, ParameterDirection.Input, SqlDbType.VarChar);
+                _DBParameters.Add("@sState", this.sState, ParameterDirection.Input, SqlDbType.VarChar);
+                _DBParameters.Add("@nPincode", this.nPincode, ParameterDirection.Input, SqlDbType.BigInt);
+                _DBParameters.Add("@sGroup", this.sGroup, ParameterDirection.Input, SqlDbType.VarChar);
+                _DBParameters.Add("@sCategory", this.sCategory, ParameterDirection.Input, SqlDbType.VarChar);
+                _DBParameters.Add("@sEmailid", this.sEmailid, ParameterDirection.Input, SqlDbType.VarChar);
                 _DBParameters.Add("@sCity", this.sCity, ParameterDirection.Input, SqlDbType.VarChar);
-                _DBParameters.Add("@dtDOB", this.dtDOB, ParameterDirection.Input, SqlDbType.DateTime);
+                _DBParameters.Add("@sDob", this.dtDOB, ParameterDirection.Input, SqlDbType.VarChar);
+                _DBParameters.Add("@nOpeningBal", this.nOpeningBal, ParameterDirection.Input, SqlDbType.BigInt);
+                _DBParameters.Add("@nClosingBal", this.nClosingBal, ParameterDirection.Input, SqlDbType.BigInt);
+                _DBParameters.Add("@nCreditBal", this.nCreditBal, ParameterDirection.Input, SqlDbType.BigInt);
+                _DBParameters.Add("@nInterestRate", this.nInterestRate, ParameterDirection.Input, SqlDbType.BigInt);
                 _DataAccess.Execute("gsp_InsertUpdateCustomer", _DBParameters, out _val);
 
                 this.nCustID = (Int64)_val;
