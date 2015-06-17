@@ -30,6 +30,7 @@ namespace FertilizerProject.Edit
                 _fertilizer.nQuntity = Convert.ToDecimal(txtFertilizerQuantity.Text.Trim());
                 _fertilizer.nUnitPrice = Convert.ToDecimal(txtFertilizerPrice.Text.Trim());
                 _fertilizer.sFertUsage = txtFertilizerUsage.Text.Trim();
+                _fertilizer.nTypeID = cmbFertilizerItem.SelectedIndex;
                 _fertilizer.nDiscount = Convert.ToDecimal(txtFertilizerDiscount.Text.Trim());
                 _fertilizer.InsertUpdateFertilizer();
             }
@@ -113,6 +114,7 @@ namespace FertilizerProject.Edit
                     txtFertilizerQuantity.Text = _dt.Rows[0]["nQuantity"].ToString();
                     txtFertilizerPrice.Text = _dt.Rows[0]["nPrice"].ToString();
                     txtFertilizerUsage.Text = _dt.Rows[0]["sUsage"].ToString();
+                    cmbFertilizerItem.SelectedIndex = Convert.ToInt32(_dt.Rows[0]["nTypeID"]);
                     txtFertilizerDiscount.Text = _dt.Rows[0]["nDiscount"].ToString();
                 }
             }

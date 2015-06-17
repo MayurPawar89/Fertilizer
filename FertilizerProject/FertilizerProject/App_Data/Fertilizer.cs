@@ -104,6 +104,48 @@ namespace FertilizerProject.App_Data
             return _result;
         }
 
+        public Int64 UpdateFertilizerAfterSales()
+        {
+            DBParameters _DBParameters = new DBParameters();
+            DataAccess _DataAccess = new DataAccess();
+            Int64 _result = 0;
+            object _val = null;
+            try
+            {
+                _DBParameters = new DBParameters();
+                _DataAccess = new DataAccess();
+
+                _DataAccess.OpenConnection(false);
+
+                _DBParameters.clear();
+                _DBParameters.Add("@nFertID", this.nFertID, ParameterDirection.InputOutput, SqlDbType.BigInt);
+                _DBParameters.Add("@nQuntity", this.nQuntity, ParameterDirection.Input, SqlDbType.Decimal);
+                _DataAccess.Execute("gsp_UpdateFertilizerAfterSales", _DBParameters, out _val);
+
+                this.nFertID = (Int64)_val;
+                _DataAccess.CloseConnection(false);
+                _result = this.nFertID;
+            }
+            catch (Exception ex)
+            {
+                _DataAccess.CloseConnection(false);
+                MessageBox.Show("Exception: " + ex.ToString());
+            }
+            finally
+            {
+                if (_DBParameters != null)
+                {
+                    _DBParameters.Dispose();
+                    _DBParameters = null;
+                }
+                if (_DataAccess != null)
+                {
+                    _DataAccess.Dispose();
+                }
+            }
+            return _result;
+        }
+
         public DataTable GetFertilizer(Int64 FertID = 0)
         {
             DataTable _dt = null;

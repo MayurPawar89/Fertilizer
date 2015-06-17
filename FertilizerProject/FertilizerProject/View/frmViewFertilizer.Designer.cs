@@ -45,7 +45,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmb = new System.Windows.Forms.ComboBox();
+            this.cmbFertilizerItem = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -193,19 +193,19 @@
             this.label1.TabIndex = 50;
             this.label1.Text = "Fertilizer Name :";
             // 
-            // cmb
+            // cmbFertilizerItem
             // 
-            this.cmb.FormattingEnabled = true;
-            this.cmb.Items.AddRange(new object[] {
+            this.cmbFertilizerItem.FormattingEnabled = true;
+            this.cmbFertilizerItem.Items.AddRange(new object[] {
             "None",
             "All",
             "Seed",
             "Pestiside",
             "Fertilizer"});
-            this.cmb.Location = new System.Drawing.Point(142, 181);
-            this.cmb.Name = "cmb";
-            this.cmb.Size = new System.Drawing.Size(126, 21);
-            this.cmb.TabIndex = 68;
+            this.cmbFertilizerItem.Location = new System.Drawing.Point(142, 181);
+            this.cmbFertilizerItem.Name = "cmbFertilizerItem";
+            this.cmbFertilizerItem.Size = new System.Drawing.Size(126, 21);
+            this.cmbFertilizerItem.TabIndex = 68;
             // 
             // label9
             // 
@@ -221,7 +221,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(448, 360);
-            this.Controls.Add(this.cmb);
+            this.Controls.Add(this.cmbFertilizerItem);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -266,7 +266,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cmb;
+        private System.Windows.Forms.ComboBox cmbFertilizerItem;
         private System.Windows.Forms.Label label9;
     }
 }

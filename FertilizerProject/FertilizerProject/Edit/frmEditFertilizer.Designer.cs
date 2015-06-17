@@ -36,6 +36,8 @@
             this.txtFertilizerPrice = new System.Windows.Forms.TextBox();
             this.pnlContent = new System.Windows.Forms.Panel();
             this.grpBoxFertilizer = new System.Windows.Forms.GroupBox();
+            this.cmbFertilizerItem = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtFertilizerUsage = new System.Windows.Forms.TextBox();
@@ -50,8 +52,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlMain = new System.Windows.Forms.Panel();
-            this.cmb = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.pnlTreeView.SuspendLayout();
             this.pnlContent.SuspendLayout();
             this.grpBoxFertilizer.SuspendLayout();
@@ -123,7 +123,7 @@
             // 
             // grpBoxFertilizer
             // 
-            this.grpBoxFertilizer.Controls.Add(this.cmb);
+            this.grpBoxFertilizer.Controls.Add(this.cmbFertilizerItem);
             this.grpBoxFertilizer.Controls.Add(this.label9);
             this.grpBoxFertilizer.Controls.Add(this.label8);
             this.grpBoxFertilizer.Controls.Add(this.label7);
@@ -149,6 +149,29 @@
             this.grpBoxFertilizer.TabIndex = 0;
             this.grpBoxFertilizer.TabStop = false;
             this.grpBoxFertilizer.Text = "groupBox1";
+            // 
+            // cmbFertilizerItem
+            // 
+            this.cmbFertilizerItem.FormattingEnabled = true;
+            this.cmbFertilizerItem.Items.AddRange(new object[] {
+            "None",
+            "All",
+            "Seed",
+            "Pestiside",
+            "Fertilizer"});
+            this.cmbFertilizerItem.Location = new System.Drawing.Point(142, 185);
+            this.cmbFertilizerItem.Name = "cmbFertilizerItem";
+            this.cmbFertilizerItem.Size = new System.Drawing.Size(126, 21);
+            this.cmbFertilizerItem.TabIndex = 70;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(100, 188);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(37, 13);
+            this.label9.TabIndex = 69;
+            this.label9.Text = "Type :";
             // 
             // label8
             // 
@@ -268,29 +291,6 @@
             this.pnlMain.Size = new System.Drawing.Size(637, 448);
             this.pnlMain.TabIndex = 2;
             // 
-            // cmb
-            // 
-            this.cmb.FormattingEnabled = true;
-            this.cmb.Items.AddRange(new object[] {
-            "None",
-            "All",
-            "Seed",
-            "Pestiside",
-            "Fertilizer"});
-            this.cmb.Location = new System.Drawing.Point(142, 185);
-            this.cmb.Name = "cmb";
-            this.cmb.Size = new System.Drawing.Size(126, 21);
-            this.cmb.TabIndex = 70;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(100, 188);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(37, 13);
-            this.label9.TabIndex = 69;
-            this.label9.Text = "Type :";
-            // 
             // frmEditFertilizer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -333,7 +333,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cmb;
+        private System.Windows.Forms.ComboBox cmbFertilizerItem;
         private System.Windows.Forms.Label label9;
     }
 }
