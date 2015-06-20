@@ -27,11 +27,20 @@ namespace FertilizerProject.Edit
                 _Customer.nCustID = Convert.ToInt64(txtUserID.Text);
                 _Customer.sFirstName = txtFirstName.Text.Trim();
                 _Customer.sLastName = txtLastName.Text.Trim();
-                _Customer.sEmailid  = txtEmail.Text.Trim();
                 _Customer.sAddress = txtAddress.Text.Trim();
                 _Customer.sPhoneNo = txtPhoneNo.Text.Trim();
+                _Customer.sTaluka = cmb1.Text.Trim();
+                _Customer.sDistrict = cmb2.Text.Trim();
+                _Customer.sState = cmb3.Text.Trim();
+                _Customer.nPincode = Convert.ToInt64(cmb4.Text);
+                _Customer.sGroup = cmb5.Text.Trim();
+                _Customer.sCategory = cmb6.Text.Trim();
+                _Customer.sEmailid = txtEmail.Text.Trim();
                 _Customer.sCity = txtCity.Text.Trim();
-                _Customer.dtDOB = Convert.ToDateTime(txtDOB.Text.Trim());
+                _Customer.dtDOB = Convert.ToDateTime(dob.Text.Trim());
+                _Customer.nOpeningBal = Convert.ToInt64(txtOpening.Text);
+                _Customer.nClosingBal = Convert.ToInt64(txtClosing.Text);
+                _Customer.nInterestRate = Convert.ToInt64(txtInterest.Text);
                 _Customer.InsertUpdateCustomer();
             }
             catch (Exception ex)
@@ -45,6 +54,7 @@ namespace FertilizerProject.Edit
                     _Customer.Dispose();
                     _Customer = null;
                 }
+                Callclear();
             }
         }
 
@@ -97,6 +107,26 @@ namespace FertilizerProject.Edit
                 grpBoxCustomer.Visible = false;
             }
         }
+        private void Callclear()
+        {
+            txtFirstName.Clear();
+            txtLastName.Clear();
+            txtAddress.Clear();
+            txtPhoneNo.Clear();
+            cmb1.Text.Equals("");
+            cmb2.Text.Equals("");
+            cmb3.Text.Equals("");
+            cmb4.Text.Equals("");
+            cmb5.Text.Equals("");
+            cmb6.Text.Equals("");
+            txtEmail.Clear();
+            txtCity.Clear();
+            dob.Text.Equals("");
+            txtOpening.Clear();
+            txtClosing.Clear();
+            txtCredit.Clear();
+            txtInterest.Clear();
+        }
 
         private void ShowSelectedUser(TreeNode treeNode)
         {
@@ -111,11 +141,22 @@ namespace FertilizerProject.Edit
                         txtUserID.Text = _dt.Rows[0]["nCustID"].ToString();
                         txtFirstName.Text = _dt.Rows[0]["sFirstName"].ToString();
                         txtLastName.Text = _dt.Rows[0]["sLastName"].ToString();
-                        txtEmail.Text = _dt.Rows[0]["sEmail"].ToString();
                         txtAddress.Text = _dt.Rows[0]["sAddress"].ToString();
                         txtPhoneNo.Text = _dt.Rows[0]["sPhoneNo"].ToString();
+                        cmb1.Text = _dt.Rows[0]["sTaluka"].ToString();
+                        cmb2.Text = _dt.Rows[0]["sDistrict"].ToString();
+                        cmb3.Text = _dt.Rows[0]["sState"].ToString();
+                        cmb4.Text = _dt.Rows[0]["nPincode"].ToString();
+                        cmb5.Text = _dt.Rows[0]["sGroup"].ToString();
+                        cmb6.Text = _dt.Rows[0]["sCategory"].ToString();
+                        txtEmail.Text = _dt.Rows[0]["sEmailid"].ToString();
                         txtCity.Text = _dt.Rows[0]["sCity"].ToString();
-                        txtDOB.Text = _dt.Rows[0]["dtDOB"].ToString();
+                        dob.Text = _dt.Rows[0]["sDob"].ToString();
+                        txtOpening.Text = _dt.Rows[0]["nOpeningBal"].ToString();
+                        txtClosing.Text = _dt.Rows[0]["nClosingBal"].ToString();
+                        txtCredit.Text = _dt.Rows[0]["nCreditBal"].ToString();
+                        txtInterest.Text = _dt.Rows[0]["nInterestRate"].ToString();
+
                     
                 }
             }

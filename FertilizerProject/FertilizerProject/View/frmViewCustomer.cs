@@ -23,12 +23,9 @@ namespace FertilizerProject
             Customer _customer = null;
             try
             {
-                //nCustID,sFirstName,sLastName,sAddress,sPhoneNo, sTaluka, 
-                //sDistrict, sState, nPincode, 
-                //sGroup, sCategory, nPhone, sEmailid, sCity, sDob, nOpeningBal, nClosingBal
-			//nCreditBal, nInterestRate, dtCreatedate, dtModifieddate
+               
                 _customer = new Customer();
-                _customer.nCustID = 0;//Convert.ToInt64(txtCustomerID.Text);
+                _customer.nCustID = 0;// Convert.ToInt64(txtCustomerID.Text);
                 _customer.sFirstName = txtFirstName.Text.Trim();
                 _customer.sLastName = txtLastName.Text.Trim();
                 _customer.sAddress = txtAddress.Text.Trim();
@@ -44,6 +41,7 @@ namespace FertilizerProject
                 _customer.dtDOB = Convert.ToDateTime(dob.Text.Trim());
                 _customer.nOpeningBal = Convert.ToInt64(txtOpening.Text);
                 _customer.nClosingBal = Convert.ToInt64(txtClosing.Text);
+                _customer.nCreditBal = Convert.ToInt64(txtCredit.Text);
                 _customer.nInterestRate = Convert.ToInt64(txtInterest.Text);
 
                 _customer.InsertUpdateCustomer();
@@ -88,6 +86,11 @@ namespace FertilizerProject
         }
 
         private void customControl1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmViewCustomer_Load(object sender, EventArgs e)
         {
 
         }
