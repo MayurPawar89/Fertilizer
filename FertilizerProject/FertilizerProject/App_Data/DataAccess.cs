@@ -48,7 +48,7 @@ namespace FertilizerProject.App_Data
         public void OpenConnection(bool WithTrn)
         {
             string _conStr = "";
-            _conStr = "Data Source=(LocalDB)\\v11.0;AttachDbFilename=H:\\DB\\test\\TestDB.mdf;Integrated Security=True;Connect Timeout=30";
+            _conStr = "Data Source=(LocalDB)\\v11.0;AttachDbFilename=E:\\TestDB_20150531\\TestDB.mdf;Integrated Security=True;Connect Timeout=30";
             _con = new SqlConnection(_conStr);
             _con.Open();
 
