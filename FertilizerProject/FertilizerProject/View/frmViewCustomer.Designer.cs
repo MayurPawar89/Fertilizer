@@ -44,7 +44,6 @@
             this.txtPhoneNo = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.cmb1 = new System.Windows.Forms.ComboBox();
@@ -56,7 +55,6 @@
             this.cmb5 = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.dob = new System.Windows.Forms.DateTimePicker();
-            this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtOpening = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -72,6 +70,8 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtCustomerID = new System.Windows.Forms.TextBox();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.btnCapture = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -234,15 +234,6 @@
             this.label10.TabIndex = 47;
             this.label10.Text = "Photo";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(568, 471);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(84, 31);
-            this.button1.TabIndex = 48;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -338,15 +329,6 @@
             this.dob.Name = "dob";
             this.dob.Size = new System.Drawing.Size(205, 26);
             this.dob.TabIndex = 62;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(658, 471);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(68, 31);
-            this.button2.TabIndex = 63;
-            this.button2.Text = "Remove";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -487,11 +469,31 @@
             this.txtCustomerID.TabIndex = 78;
             this.txtCustomerID.Visible = false;
             // 
+            // btnReset
+            // 
+            this.btnReset.Location = new System.Drawing.Point(659, 471);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(75, 26);
+            this.btnReset.TabIndex = 80;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = true;
+            // 
+            // btnCapture
+            // 
+            this.btnCapture.Location = new System.Drawing.Point(568, 471);
+            this.btnCapture.Name = "btnCapture";
+            this.btnCapture.Size = new System.Drawing.Size(75, 26);
+            this.btnCapture.TabIndex = 79;
+            this.btnCapture.Text = "Capture";
+            this.btnCapture.UseVisualStyleBackColor = true;
+            // 
             // frmViewCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(951, 625);
+            this.Controls.Add(this.btnReset);
+            this.Controls.Add(this.btnCapture);
             this.Controls.Add(this.txtCustomerID);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cmb4);
@@ -506,7 +508,6 @@
             this.Controls.Add(this.comboBox6);
             this.Controls.Add(this.txtOpening);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.dob);
             this.Controls.Add(this.cmb6);
             this.Controls.Add(this.label14);
@@ -518,7 +519,6 @@
             this.Controls.Add(this.cmb1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtPhoneNo);
@@ -566,7 +566,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox cmb1;
@@ -578,7 +577,6 @@
         private System.Windows.Forms.ComboBox cmb5;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.DateTimePicker dob;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txtOpening;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox comboBox6;
@@ -593,5 +591,7 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtCustomerID;
+        private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Button btnCapture;
     }
 }

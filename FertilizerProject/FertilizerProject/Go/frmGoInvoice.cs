@@ -381,8 +381,11 @@ namespace FertilizerProject
             if (txtNetAmount.Text.Trim()!=""&&txtTotalAmount.Text.Trim()!="")
             {
                 decimal _nBalanceAmt = 0;
-                _nBalanceAmt = Convert.ToDecimal(txtTotalAmount.Text) - Convert.ToDecimal(txtPaidAmount.Text);
-
+                if (txtPaidAmount.Text!="")
+                {
+                    _nBalanceAmt = Convert.ToDecimal(txtTotalAmount.Text) - Convert.ToDecimal(txtPaidAmount.Text);
+                }
+                
                 txtBalanceAmount.Text = string.Format("{0:0.00}", _nBalanceAmt);
             }
         }
