@@ -35,6 +35,7 @@ namespace FertilizerProject
                 _fertilizer.nQuntity = Convert.ToDecimal(txtFertilizerQuantity.Text.Trim());
                 _fertilizer.nUnitPrice = Convert.ToDecimal(txtFertilizerPrice.Text.Trim());
                 _fertilizer.sFertUsage = txtFertilizerUsage.Text.Trim();
+                _fertilizer.nTypeID = Convert.ToInt32(cmbFertilizerItem.SelectedValue);
                 _fertilizer.nDiscount = Convert.ToDecimal(txtFertilizerDiscount.Text.Trim());
                 _fertilizer.InsertUpdateFertilizer();
             }

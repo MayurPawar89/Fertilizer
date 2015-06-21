@@ -140,14 +140,18 @@ namespace FertilizerProject.App_Data
         public Int64 GetInvoiceNo()
         {
             Int64 _result = 0;
-            object _val = null;
+            
+            DataTable _dt = new DataTable();
             DataAccess _DataAccess = new DataAccess();
             try
             {
                 _DataAccess.OpenConnection(false);
-                _DataAccess.Execute("gsp_GetInvoiceNo",out _val);
-
-               _result = (Int64)_val;
+                _DataAccess.Retrive("gsp_GetInvoiceNo",out _dt);
+                if (_dt!=null&&_dt.Rows.Count>0)
+                {
+                    _result = Convert.ToInt64(_dt.Rows[0][0]);
+                }
+               
                 _DataAccess.CloseConnection(false);
             }
             catch (Exception)

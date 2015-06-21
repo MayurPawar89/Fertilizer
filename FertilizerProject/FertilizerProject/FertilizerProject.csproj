@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="App_Data\Customer.cs" />
     <Compile Include="App_Data\DataAccess.cs" />
+    <Compile Include="App_Data\EnumClass.cs" />
     <Compile Include="App_Data\Fertilizer.cs" />
     <Compile Include="App_Data\FertilizerSales.cs" />
     <Compile Include="App_Data\User.cs" />
