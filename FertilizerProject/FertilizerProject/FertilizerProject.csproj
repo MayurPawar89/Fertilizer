@@ -69,6 +69,18 @@
     <Compile Include="App_Data\Fertilizer.cs" />
     <Compile Include="App_Data\FertilizerSales.cs" />
     <Compile Include="App_Data\User.cs" />
+    <Compile Include="Edit\frmVoucherPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\frmVoucherPayment.Designer.cs">
+      <DependentUpon>frmVoucherPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\FrmVoucherReciept.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\FrmVoucherReciept.Designer.cs">
+      <DependentUpon>FrmVoucherReciept.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\CustomControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -136,6 +148,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Edit\frmVoucherPayment.resx">
+      <DependentUpon>frmVoucherPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\FrmVoucherReciept.resx">
+      <DependentUpon>FrmVoucherReciept.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CustomControl.resx">
       <DependentUpon>CustomControl.cs</DependentUpon>
     </EmbeddedResource>
