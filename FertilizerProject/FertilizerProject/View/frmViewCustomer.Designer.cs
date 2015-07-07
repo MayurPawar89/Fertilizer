@@ -70,8 +70,8 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtCustomerID = new System.Windows.Forms.TextBox();
-            this.btnReset = new System.Windows.Forms.Button();
             this.btnCapture = new System.Windows.Forms.Button();
+            this.btnSaveImage = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -469,15 +469,6 @@
             this.txtCustomerID.TabIndex = 78;
             this.txtCustomerID.Visible = false;
             // 
-            // btnReset
-            // 
-            this.btnReset.Location = new System.Drawing.Point(659, 471);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(75, 26);
-            this.btnReset.TabIndex = 80;
-            this.btnReset.Text = "Reset";
-            this.btnReset.UseVisualStyleBackColor = true;
-            // 
             // btnCapture
             // 
             this.btnCapture.Location = new System.Drawing.Point(568, 471);
@@ -486,13 +477,24 @@
             this.btnCapture.TabIndex = 79;
             this.btnCapture.Text = "Capture";
             this.btnCapture.UseVisualStyleBackColor = true;
+            this.btnCapture.Click += new System.EventHandler(this.btnCapture_Click);
+            // 
+            // btnSaveImage
+            // 
+            this.btnSaveImage.Location = new System.Drawing.Point(649, 471);
+            this.btnSaveImage.Name = "btnSaveImage";
+            this.btnSaveImage.Size = new System.Drawing.Size(75, 26);
+            this.btnSaveImage.TabIndex = 80;
+            this.btnSaveImage.Text = "Save";
+            this.btnSaveImage.UseVisualStyleBackColor = true;
+            this.btnSaveImage.Click += new System.EventHandler(this.btnSaveImage_Click);
             // 
             // frmViewCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(951, 625);
-            this.Controls.Add(this.btnReset);
+            this.Controls.Add(this.btnSaveImage);
             this.Controls.Add(this.btnCapture);
             this.Controls.Add(this.txtCustomerID);
             this.Controls.Add(this.label8);
@@ -591,7 +593,7 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtCustomerID;
-        private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnCapture;
+        private System.Windows.Forms.Button btnSaveImage;
     }
 }

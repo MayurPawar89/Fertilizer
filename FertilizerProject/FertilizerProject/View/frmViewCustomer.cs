@@ -8,6 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using WebCam_Capture;
+using WinFormCharpWebCam;
+
+
 
 namespace FertilizerProject
 {
@@ -17,13 +22,13 @@ namespace FertilizerProject
         {
             InitializeComponent();
         }
-
+        
         private void btnSave_Click(object sender, EventArgs e)
         {
             Customer _customer = null;
             try
             {
-               
+
                 _customer = new Customer();
                 _customer.nCustID = 0;// Convert.ToInt64(txtCustomerID.Text);
                 _customer.sFirstName = txtFirstName.Text.Trim();
@@ -89,10 +94,58 @@ namespace FertilizerProject
         {
 
         }
-
+        WebCam webcam;
         private void frmViewCustomer_Load(object sender, EventArgs e)
         {
+            webcam = new WebCam();
+            webcam.InitializeWebCam(ref pictureBox1);
 
+        }
+
+        private void btnSaveImage_Click(object sender, EventArgs e)
+        {
+            //SaveFileDialog s = new SaveFileDialog();
+            //s.FileName = "Image";// Default file name
+            //s.DefaultExt = ".Jpg";// Default file extension
+            //s.Filter = "Image (.jpg)|*.jpg"; // Filter files by extension
+
+            //// Show save file dialog box
+            //// Process save file dialog box results
+            //if (s.ShowDialog() == DialogResult.OK)
+            //{
+            //    // Save Image
+            //    string filename = s.FileName;
+            //    FileStream fstream = new FileStream(filename, FileMode.Create);
+            //  image.Save(fstream, System.Drawing.Imaging.ImageFormat.Jpeg);
+            //    fstream.Close();
+
+            //}
+            SaveImageCapture(pictureBox1.Image);
+
+        }
+        public static void SaveImageCapture(System.Drawing.Image image)
+        {
+
+            SaveFileDialog s = new SaveFileDialog();
+            s.FileName = "Image";// Default file name
+            s.DefaultExt = ".Jpg";// Default file extension
+            s.Filter = "Image (.jpg)|*.jpg"; // Filter files by extension
+
+            // Show save file dialog box
+            // Process save file dialog box results
+            if (s.ShowDialog() == DialogResult.OK)
+            {
+                // Save Image
+                string filename = s.FileName;
+                FileStream fstream = new FileStream(filename, FileMode.Create);
+                image.Save(fstream, System.Drawing.Imaging.ImageFormat.Jpeg);
+                fstream.Close();
+
+            }
+        }
+        private void btnCapture_Click(object sender, EventArgs e)
+        {
+            webcam.Start();
         }
     }
 }
