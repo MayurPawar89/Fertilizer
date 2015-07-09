@@ -72,6 +72,7 @@
             this.txtCustomerID = new System.Windows.Forms.TextBox();
             this.btnCapture = new System.Windows.Forms.Button();
             this.btnSaveImage = new System.Windows.Forms.Button();
+            this.btnStop = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -228,7 +229,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(626, 251);
+            this.label10.Location = new System.Drawing.Point(679, 251);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(45, 18);
             this.label10.TabIndex = 47;
@@ -335,7 +336,7 @@
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Location = new System.Drawing.Point(568, 286);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(166, 165);
+            this.pictureBox1.Size = new System.Drawing.Size(251, 165);
             this.pictureBox1.TabIndex = 46;
             this.pictureBox1.TabStop = false;
             // 
@@ -475,7 +476,7 @@
             this.btnCapture.Name = "btnCapture";
             this.btnCapture.Size = new System.Drawing.Size(75, 26);
             this.btnCapture.TabIndex = 79;
-            this.btnCapture.Text = "Capture";
+            this.btnCapture.Text = "Start";
             this.btnCapture.UseVisualStyleBackColor = true;
             this.btnCapture.Click += new System.EventHandler(this.btnCapture_Click);
             // 
@@ -489,11 +490,22 @@
             this.btnSaveImage.UseVisualStyleBackColor = true;
             this.btnSaveImage.Click += new System.EventHandler(this.btnSaveImage_Click);
             // 
+            // btnStop
+            // 
+            this.btnStop.Location = new System.Drawing.Point(730, 471);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(75, 26);
+            this.btnStop.TabIndex = 81;
+            this.btnStop.Text = "Stop";
+            this.btnStop.UseVisualStyleBackColor = true;
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
+            // 
             // frmViewCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(951, 625);
+            this.Controls.Add(this.btnStop);
             this.Controls.Add(this.btnSaveImage);
             this.Controls.Add(this.btnCapture);
             this.Controls.Add(this.txtCustomerID);
@@ -595,5 +607,6 @@
         private System.Windows.Forms.TextBox txtCustomerID;
         private System.Windows.Forms.Button btnCapture;
         private System.Windows.Forms.Button btnSaveImage;
+        private System.Windows.Forms.Button btnStop;
     }
 }

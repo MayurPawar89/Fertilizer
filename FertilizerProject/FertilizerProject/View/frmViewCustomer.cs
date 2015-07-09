@@ -147,5 +147,12 @@ namespace FertilizerProject
         {
             webcam.Start();
         }
+
+        private void btnStop_Click(object sender, EventArgs e)
+        {
+            webcam.Stop();
+        }
+
+        
     }
 }

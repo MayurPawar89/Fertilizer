@@ -51,7 +51,6 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnBankRecon = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
             this.btnH = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -69,7 +68,7 @@
             // txtPaymentno
             // 
             this.txtPaymentno.Location = new System.Drawing.Point(147, 40);
-            this.txtPaymentno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPaymentno.Margin = new System.Windows.Forms.Padding(4);
             this.txtPaymentno.Name = "txtPaymentno";
             this.txtPaymentno.Size = new System.Drawing.Size(125, 26);
             this.txtPaymentno.TabIndex = 1;
@@ -77,7 +76,7 @@
             // txtManualno
             // 
             this.txtManualno.Location = new System.Drawing.Point(470, 45);
-            this.txtManualno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtManualno.Margin = new System.Windows.Forms.Padding(4);
             this.txtManualno.Name = "txtManualno";
             this.txtManualno.Size = new System.Drawing.Size(125, 26);
             this.txtManualno.TabIndex = 3;
@@ -108,7 +107,7 @@
             // 
             this.dtPayment.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtPayment.Location = new System.Drawing.Point(147, 101);
-            this.dtPayment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtPayment.Margin = new System.Windows.Forms.Padding(4);
             this.dtPayment.Name = "dtPayment";
             this.dtPayment.Size = new System.Drawing.Size(151, 26);
             this.dtPayment.TabIndex = 5;
@@ -127,7 +126,7 @@
             // txtDebitacct
             // 
             this.txtDebitacct.Location = new System.Drawing.Point(147, 150);
-            this.txtDebitacct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDebitacct.Margin = new System.Windows.Forms.Padding(4);
             this.txtDebitacct.Name = "txtDebitacct";
             this.txtDebitacct.Size = new System.Drawing.Size(485, 26);
             this.txtDebitacct.TabIndex = 7;
@@ -146,7 +145,7 @@
             // txtAmount
             // 
             this.txtAmount.Location = new System.Drawing.Point(147, 201);
-            this.txtAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAmount.Margin = new System.Windows.Forms.Padding(4);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Size = new System.Drawing.Size(151, 26);
             this.txtAmount.TabIndex = 9;
@@ -166,7 +165,7 @@
             // 
             this.cmbPaymentmode.FormattingEnabled = true;
             this.cmbPaymentmode.Location = new System.Drawing.Point(147, 244);
-            this.cmbPaymentmode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbPaymentmode.Margin = new System.Windows.Forms.Padding(4);
             this.cmbPaymentmode.Name = "cmbPaymentmode";
             this.cmbPaymentmode.Size = new System.Drawing.Size(151, 26);
             this.cmbPaymentmode.TabIndex = 11;
@@ -175,7 +174,7 @@
             // 
             this.cmbCategory.FormattingEnabled = true;
             this.cmbCategory.Location = new System.Drawing.Point(147, 291);
-            this.cmbCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbCategory.Margin = new System.Windows.Forms.Padding(4);
             this.cmbCategory.Name = "cmbCategory";
             this.cmbCategory.Size = new System.Drawing.Size(155, 26);
             this.cmbCategory.TabIndex = 13;
@@ -205,7 +204,7 @@
             // txtPaymentdetails
             // 
             this.txtPaymentdetails.Location = new System.Drawing.Point(147, 334);
-            this.txtPaymentdetails.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPaymentdetails.Margin = new System.Windows.Forms.Padding(4);
             this.txtPaymentdetails.Name = "txtPaymentdetails";
             this.txtPaymentdetails.Size = new System.Drawing.Size(485, 26);
             this.txtPaymentdetails.TabIndex = 15;
@@ -272,19 +271,11 @@
             this.btnCancel.TabIndex = 22;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
-            // 
-            // btnClose
-            // 
-            this.btnClose.Location = new System.Drawing.Point(609, 432);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(81, 28);
-            this.btnClose.TabIndex = 23;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnH
             // 
-            this.btnH.Location = new System.Drawing.Point(696, 432);
+            this.btnH.Location = new System.Drawing.Point(609, 432);
             this.btnH.Name = "btnH";
             this.btnH.Size = new System.Drawing.Size(24, 28);
             this.btnH.TabIndex = 24;
@@ -297,7 +288,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(775, 521);
             this.Controls.Add(this.btnH);
-            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnBankRecon);
             this.Controls.Add(this.btnDelete);
@@ -322,7 +312,7 @@
             this.Controls.Add(this.txtPaymentno);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmVoucherPayment";
             this.Text = "frmVoucherPayment";
             this.ResumeLayout(false);
@@ -355,7 +345,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnBankRecon;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnH;
     }
 }

@@ -44,6 +44,8 @@
             this.TSMI_Tools_Settings = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMI_ToolSetting_ServerSetting = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMI_Exit = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSMI_VoucherPayment = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSMI_VoucherReceipt = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,7 +75,7 @@
             // TSMI_FileExit
             // 
             this.TSMI_FileExit.Name = "TSMI_FileExit";
-            this.TSMI_FileExit.Size = new System.Drawing.Size(152, 22);
+            this.TSMI_FileExit.Size = new System.Drawing.Size(92, 22);
             this.TSMI_FileExit.Text = "E&xit";
             // 
             // TSMI_Edit
@@ -89,21 +91,21 @@
             // TSMI_EditUser
             // 
             this.TSMI_EditUser.Name = "TSMI_EditUser";
-            this.TSMI_EditUser.Size = new System.Drawing.Size(152, 22);
+            this.TSMI_EditUser.Size = new System.Drawing.Size(146, 22);
             this.TSMI_EditUser.Text = "Edit&User";
             this.TSMI_EditUser.Click += new System.EventHandler(this.TSMI_EditUser_Click);
             // 
             // TSMI_EditFertilizer
             // 
             this.TSMI_EditFertilizer.Name = "TSMI_EditFertilizer";
-            this.TSMI_EditFertilizer.Size = new System.Drawing.Size(152, 22);
+            this.TSMI_EditFertilizer.Size = new System.Drawing.Size(146, 22);
             this.TSMI_EditFertilizer.Text = "Edit&Fertilizer";
             this.TSMI_EditFertilizer.Click += new System.EventHandler(this.TSMI_EditFertilizer_Click);
             // 
             // TSMI_EditCustomer
             // 
             this.TSMI_EditCustomer.Name = "TSMI_EditCustomer";
-            this.TSMI_EditCustomer.Size = new System.Drawing.Size(152, 22);
+            this.TSMI_EditCustomer.Size = new System.Drawing.Size(146, 22);
             this.TSMI_EditCustomer.Text = "Edit&Customer";
             this.TSMI_EditCustomer.Click += new System.EventHandler(this.TSMI_EditCustomer_Click);
             // 
@@ -112,7 +114,9 @@
             this.TSMI_View.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TSMI_ViewUser,
             this.TSMI_ViewFertilizer,
-            this.TSMI_ViewCustomer});
+            this.TSMI_ViewCustomer,
+            this.TSMI_VoucherPayment,
+            this.TSMI_VoucherReceipt});
             this.TSMI_View.Name = "TSMI_View";
             this.TSMI_View.Size = new System.Drawing.Size(44, 20);
             this.TSMI_View.Text = "&View";
@@ -120,21 +124,21 @@
             // TSMI_ViewUser
             // 
             this.TSMI_ViewUser.Name = "TSMI_ViewUser";
-            this.TSMI_ViewUser.Size = new System.Drawing.Size(152, 22);
+            this.TSMI_ViewUser.Size = new System.Drawing.Size(165, 22);
             this.TSMI_ViewUser.Text = "View&User";
             this.TSMI_ViewUser.Click += new System.EventHandler(this.TSMI_ViewUser_Click);
             // 
             // TSMI_ViewFertilizer
             // 
             this.TSMI_ViewFertilizer.Name = "TSMI_ViewFertilizer";
-            this.TSMI_ViewFertilizer.Size = new System.Drawing.Size(152, 22);
+            this.TSMI_ViewFertilizer.Size = new System.Drawing.Size(165, 22);
             this.TSMI_ViewFertilizer.Text = "View&Fertilizer";
             this.TSMI_ViewFertilizer.Click += new System.EventHandler(this.TSMI_ViewFertilizer_Click);
             // 
             // TSMI_ViewCustomer
             // 
             this.TSMI_ViewCustomer.Name = "TSMI_ViewCustomer";
-            this.TSMI_ViewCustomer.Size = new System.Drawing.Size(152, 22);
+            this.TSMI_ViewCustomer.Size = new System.Drawing.Size(165, 22);
             this.TSMI_ViewCustomer.Text = "View&Customer";
             this.TSMI_ViewCustomer.Click += new System.EventHandler(this.TSMI_ViewCustomer_Click);
             // 
@@ -149,7 +153,7 @@
             // TSMI_GoInvoice
             // 
             this.TSMI_GoInvoice.Name = "TSMI_GoInvoice";
-            this.TSMI_GoInvoice.Size = new System.Drawing.Size(152, 22);
+            this.TSMI_GoInvoice.Size = new System.Drawing.Size(112, 22);
             this.TSMI_GoInvoice.Text = "&Invoice";
             this.TSMI_GoInvoice.Click += new System.EventHandler(this.TSMI_GoInvoice_Click);
             // 
@@ -164,7 +168,7 @@
             // TSMI_ToolSetting_ServerSetting
             // 
             this.TSMI_ToolSetting_ServerSetting.Name = "TSMI_ToolSetting_ServerSetting";
-            this.TSMI_ToolSetting_ServerSetting.Size = new System.Drawing.Size(152, 22);
+            this.TSMI_ToolSetting_ServerSetting.Size = new System.Drawing.Size(146, 22);
             this.TSMI_ToolSetting_ServerSetting.Text = "&Server Setting";
             this.TSMI_ToolSetting_ServerSetting.Click += new System.EventHandler(this.TSMI_ToolSetting_ServerSetting_Click);
             // 
@@ -174,6 +178,20 @@
             this.TSMI_Exit.Size = new System.Drawing.Size(37, 20);
             this.TSMI_Exit.Text = "E&xit";
             this.TSMI_Exit.Click += new System.EventHandler(this.TSMI_Exit_Click);
+            // 
+            // TSMI_VoucherPayment
+            // 
+            this.TSMI_VoucherPayment.Name = "TSMI_VoucherPayment";
+            this.TSMI_VoucherPayment.Size = new System.Drawing.Size(165, 22);
+            this.TSMI_VoucherPayment.Text = "Voucher&Payment";
+            this.TSMI_VoucherPayment.Click += new System.EventHandler(this.TSMI_VoucherPayment_Click);
+            // 
+            // TSMI_VoucherReceipt
+            // 
+            this.TSMI_VoucherReceipt.Name = "TSMI_VoucherReceipt";
+            this.TSMI_VoucherReceipt.Size = new System.Drawing.Size(165, 22);
+            this.TSMI_VoucherReceipt.Text = "Voucher&Reciept";
+            this.TSMI_VoucherReceipt.Click += new System.EventHandler(this.TSMI_VoucherReceipt_Click);
             // 
             // Dashboard
             // 
@@ -214,5 +232,7 @@
         private System.Windows.Forms.ToolStripMenuItem TSMI_EditCustomer;
         private System.Windows.Forms.ToolStripMenuItem TSMI_ToolSetting_ServerSetting;
         private System.Windows.Forms.ToolStripMenuItem TSMI_GoInvoice;
+        private System.Windows.Forms.ToolStripMenuItem TSMI_VoucherPayment;
+        private System.Windows.Forms.ToolStripMenuItem TSMI_VoucherReceipt;
     }
 }
