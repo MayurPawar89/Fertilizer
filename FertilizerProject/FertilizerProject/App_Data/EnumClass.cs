@@ -13,7 +13,7 @@ namespace FertilizerProject.App_Data
             credit,cash,cheque
         }
         public static string sShopName = "Fertilizer Shop";
-        public string sUserName = string.Empty;
+        public static string sUserName = string.Empty;
         
     }
 }

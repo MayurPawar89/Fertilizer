@@ -31,6 +31,7 @@ namespace FertilizerProject
             string sPassword = string.Empty;
             string sDBUserName = string.Empty;
             string sDBPassword = string.Empty;
+            bool bIsValidUser = false;
 
             sUserName = txtUserName.Text.Trim();
             sPassword = txtPassword.Text.Trim();
@@ -43,23 +44,27 @@ namespace FertilizerProject
                 {
                     if (Convert.ToString(drUser["sUserName"]) == sUserName)
                     {
+                        sDBPassword = Encryption.DecryptToBase64String(Convert.ToString(drUser["sPassword"]));
                         //change if condition by using decryption method of encryption class
-                        if (Convert.ToString(drUser["sPassword"]) == sPassword)
+                        if (sDBPassword == sPassword)
                         {
-
+                            EnumClass.sUserName = Convert.ToString(drUser["sUserName"]);
+                            bIsValidUser = true;
                         }
                         else
                         {
                             MessageBox.Show("Password not match. Please check and enter again.");
+                            bIsValidUser = false;
                         }
                     }
                     else
                     {
                         MessageBox.Show("User Name not match. Please check and enter again.");
+                        bIsValidUser = false;
                     }
                 }
             }
-            if (sUserName == "mayur" && sPassword == "mayur")
+            if (bIsValidUser)
             {
                 Dashboard frmDashboard = new Dashboard();
                 this.Hide();
