@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Data\Voucher.cs" />
     <Compile Include="App_Data\Customer.cs" />
     <Compile Include="App_Data\DataAccess.cs" />
     <Compile Include="App_Data\EnumClass.cs" />
@@ -84,6 +85,12 @@
     </Compile>
     <Compile Include="Edit\FrmVoucherReciept.Designer.cs">
       <DependentUpon>FrmVoucherReciept.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="View\WebCam.cs" />
     <Compile Include="UserControls\CustomControl.cs">
@@ -161,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Edit\FrmVoucherReciept.resx">
       <DependentUpon>FrmVoucherReciept.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CustomControl.resx">
       <DependentUpon>CustomControl.cs</DependentUpon>

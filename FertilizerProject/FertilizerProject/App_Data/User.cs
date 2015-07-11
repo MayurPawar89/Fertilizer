@@ -123,6 +123,32 @@ namespace FertilizerProject.App_Data
             }
             return _dt;
         }
+
+        public DataTable GetUseratLogin(string UserName = "")
+        {
+            DataTable _dt = null;
+
+            DBParameters _DBParameters = new DBParameters();
+            DataAccess _DataAccess = new DataAccess();
+            try
+            {
+                _DataAccess.OpenConnection(false);
+                _DBParameters.clear();
+                _DBParameters.Add("@sUserName", UserName, ParameterDirection.Input, SqlDbType.VarChar);
+                _DataAccess.Retrive("gsp_GetUsersByName", _DBParameters, out _dt);
+
+                _DataAccess.CloseConnection(false);
+            }
+            catch (Exception)
+            {
+                if (_DataAccess != null) { _DataAccess.RollBack(); _DataAccess.CloseConnection(false); }
+            }
+            finally
+            {
+                if (_DBParameters != null) { _DBParameters.Dispose(); }
+            }
+            return _dt;
+        }
         #endregion
     }
 }
