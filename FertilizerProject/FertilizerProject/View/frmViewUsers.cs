@@ -24,13 +24,14 @@ namespace FertilizerProject
             User _User = null;
             try
             {
+                string sPassword = Encryption.EncryptToBase64String(Convert.ToString(txtPassword.Text.Trim()));
                 _User = new User();
                 _User.nUserID = Convert.ToInt64(txtUserID.Text);
                 _User.sFirstName = txtFirstName.Text.Trim();
                 _User.sLastName = txtLastName.Text.Trim();
                 _User.sEmail = txtEmail.Text.Trim();
                 _User.sUserName = txtUserName.Text.Trim();
-                _User.sPassword = txtPassword.Text.Trim();
+                _User.sPassword = sPassword;
                 _User.InsertUpdateUser();
             }
             catch (Exception ex)

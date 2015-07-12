@@ -54,6 +54,7 @@
             this.tsbDelete = new System.Windows.Forms.ToolStripButton();
             this.tsbClose = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.label5 = new System.Windows.Forms.Label();
             this.pnlMain.SuspendLayout();
             this.pnlOther.SuspendLayout();
             this.pnlContent.SuspendLayout();
@@ -103,6 +104,7 @@
             // 
             // grpBoxUsers
             // 
+            this.grpBoxUsers.Controls.Add(this.label5);
             this.grpBoxUsers.Controls.Add(this.txtPassword);
             this.grpBoxUsers.Controls.Add(this.txtUserID);
             this.grpBoxUsers.Controls.Add(this.btnCancel);
@@ -125,12 +127,11 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(293, 40);
+            this.txtPassword.Location = new System.Drawing.Point(120, 172);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(134, 20);
+            this.txtPassword.Size = new System.Drawing.Size(154, 20);
             this.txtPassword.TabIndex = 26;
             this.txtPassword.UseSystemPasswordChar = true;
-            this.txtPassword.Visible = false;
             // 
             // txtUserID
             // 
@@ -143,7 +144,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(200, 176);
+            this.btnCancel.Location = new System.Drawing.Point(200, 215);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 23;
@@ -153,7 +154,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(119, 176);
+            this.btnUpdate.Location = new System.Drawing.Point(119, 215);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnUpdate.TabIndex = 22;
@@ -163,7 +164,7 @@
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(119, 136);
+            this.txtUserName.Location = new System.Drawing.Point(119, 137);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(155, 20);
             this.txtUserName.TabIndex = 20;
@@ -320,6 +321,15 @@
             this.toolStripButton1.Size = new System.Drawing.Size(23, 53);
             this.toolStripButton1.Text = "toolStripButton1";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(55, 175);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(59, 13);
+            this.label5.TabIndex = 27;
+            this.label5.Text = "Password :";
+            // 
             // frmEditUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -371,6 +381,7 @@
         private System.Windows.Forms.ToolStripButton tsbModify;
         private System.Windows.Forms.ToolStripButton tsbDelete;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.Label label5;
 
     }
 }

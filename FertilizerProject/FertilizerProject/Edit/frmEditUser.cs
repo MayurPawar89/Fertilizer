@@ -46,7 +46,7 @@ namespace FertilizerProject.Edit
             {
                 _user = new User();
                 _dt = _user.GetUser();
-                if (_dt!=null&&_dt.Rows.Count>0)
+                if (_dt != null && _dt.Rows.Count > 0)
                 {
                     TreeNode RootNode = new TreeNode("Users");
                     RootNode.Tag = Convert.ToInt64("0");
@@ -67,7 +67,7 @@ namespace FertilizerProject.Edit
 
         private void trvUsers_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
-            if (e.Node.Tag.ToString()!="0")
+            if (e.Node.Tag.ToString() != "0")
             {
                 ShowSelectedUser(e.Node);
             }
@@ -75,7 +75,7 @@ namespace FertilizerProject.Edit
             {
                 grpBoxUsers.Visible = false;
             }
-            
+
         }
 
         private void ShowSelectedUser(TreeNode treeNode)
@@ -86,14 +86,15 @@ namespace FertilizerProject.Edit
             {
                 _user = new User();
                 _dt = _user.GetUser(Convert.ToInt64(treeNode.Tag));
-                if (_dt!=null&&_dt.Rows.Count>0)
+                if (_dt != null && _dt.Rows.Count > 0)
                 {
-                       txtUserID.Text = _dt.Rows[0]["nUserID"].ToString();
-                        txtFirstName.Text = _dt.Rows[0]["sFirstName"].ToString();
-                        txtLastName.Text = _dt.Rows[0]["sLastName"].ToString();
-                        txtEmail.Text = _dt.Rows[0]["sEmail"].ToString();
-                        txtUserName.Text = _dt.Rows[0]["sUserName"].ToString();
-                        txtPassword.Text = _dt.Rows[0]["sPassword"].ToString();
+                    txtUserID.Text = _dt.Rows[0]["nUserID"].ToString();
+                    txtFirstName.Text = _dt.Rows[0]["sFirstName"].ToString();
+                    txtLastName.Text = _dt.Rows[0]["sLastName"].ToString();
+                    txtEmail.Text = _dt.Rows[0]["sEmail"].ToString();
+                    txtUserName.Text = _dt.Rows[0]["sUserName"].ToString();
+                    string sPassword = Encryption.DecryptToBase64String(Convert.ToString(_dt.Rows[0]["sPassword"]));
+                    txtPassword.Text = sPassword;
                 }
             }
             catch (Exception)
@@ -109,13 +110,14 @@ namespace FertilizerProject.Edit
             User _User = null;
             try
             {
+                string sPassword = Encryption.EncryptToBase64String(Convert.ToString(txtPassword.Text.Trim()));
                 _User = new User();
                 _User.nUserID = Convert.ToInt64(txtUserID.Text);
                 _User.sFirstName = txtFirstName.Text.Trim();
                 _User.sLastName = txtLastName.Text.Trim();
                 _User.sEmail = txtEmail.Text.Trim();
                 _User.sUserName = txtUserName.Text.Trim();
-                _User.sPassword = txtPassword.Text.Trim();
+                _User.sPassword = sPassword;
                 _User.InsertUpdateUser();
             }
             catch (Exception ex)
