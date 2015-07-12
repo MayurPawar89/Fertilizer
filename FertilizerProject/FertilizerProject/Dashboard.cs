@@ -100,11 +100,13 @@ namespace FertilizerProject
             frm.Show();
         }
 
-        private void TSMI_VoucherReceipt_Click(object sender, EventArgs e)
+        private void TSMI_VoucherReciept_Click(object sender, EventArgs e)
         {
-            FrmVoucherReciept frm = new FrmVoucherReciept();
-            frm.MdiParent = this;
-            frm.Show();
+            FrmVoucherReciept frm =new FrmVoucherReciept();
+            frm.MdiParent =this;
+            frm.Show ();
         }
+
+       
     }
 }

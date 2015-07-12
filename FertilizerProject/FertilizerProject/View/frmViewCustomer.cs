@@ -22,13 +22,13 @@ namespace FertilizerProject
         {
             InitializeComponent();
         }
-        
+        WebCam webcam;
+        Int64 i = 0;
         private void btnSave_Click(object sender, EventArgs e)
         {
             Customer _customer = null;
             try
             {
-
                 _customer = new Customer();
                 _customer.nCustID = 0;// Convert.ToInt64(txtCustomerID.Text);
                 _customer.sFirstName = txtFirstName.Text.Trim();
@@ -48,8 +48,31 @@ namespace FertilizerProject
                 _customer.nClosingBal = Convert.ToInt64(txtClosing.Text);
                 _customer.nCreditBal = Convert.ToInt64(txtCredit.Text);
                 _customer.nInterestRate = Convert.ToInt64(txtInterest.Text);
+                i = _customer.InsertUpdateCustomer();
+                SaveFileDialog s = new SaveFileDialog();
 
-                _customer.InsertUpdateCustomer();
+                s.FileName = i.ToString() + "_" + txtFirstName.Text.Trim() + "_" + txtLastName.Text.Trim();// Default file name
+                s.DefaultExt = ".Jpg";// Default file extension
+                s.Filter = "Image (.jpg)|*.jpg"; // Filter files by extension
+
+                //System.Drawing.Image image = null;
+                // Show save file dialog box
+                // Process save file dialog box results
+                if (s.ShowDialog() == DialogResult.OK)
+                {
+                    // Save Image
+                    string filename = s.FileName;
+                    FileStream fstream = new FileStream(filename, FileMode.Create);
+
+                    //image.Save(fstream, System.Drawing.Imaging.ImageFormat.Jpeg);
+                    Bitmap bmpImage = new Bitmap(pictureBox1.Image);
+                    Bitmap newImg = new Bitmap(bmpImage);
+                    bmpImage.Save(fstream, System.Drawing.Imaging.ImageFormat.Jpeg);
+                    bmpImage.Dispose();
+                    bmpImage = null;
+                    fstream.Close();
+
+                }
             }
             catch (Exception ex)
             {
@@ -90,62 +113,14 @@ namespace FertilizerProject
 
         }
 
-        private void customControl1_Load(object sender, EventArgs e)
-        {
 
-        }
-        WebCam webcam;
         private void frmViewCustomer_Load(object sender, EventArgs e)
         {
             webcam = new WebCam();
             webcam.InitializeWebCam(ref pictureBox1);
-
-        }
-
-        private void btnSaveImage_Click(object sender, EventArgs e)
-        {
-            //SaveFileDialog s = new SaveFileDialog();
-            //s.FileName = "Image";// Default file name
-            //s.DefaultExt = ".Jpg";// Default file extension
-            //s.Filter = "Image (.jpg)|*.jpg"; // Filter files by extension
-
-            //// Show save file dialog box
-            //// Process save file dialog box results
-            //if (s.ShowDialog() == DialogResult.OK)
-            //{
-            //    // Save Image
-            //    string filename = s.FileName;
-            //    FileStream fstream = new FileStream(filename, FileMode.Create);
-            //  image.Save(fstream, System.Drawing.Imaging.ImageFormat.Jpeg);
-            //    fstream.Close();
-
-            //}
-            SaveImageCapture(pictureBox1.Image);
-
-        }
-        public static void SaveImageCapture(System.Drawing.Image image)
-        {
-
-            SaveFileDialog s = new SaveFileDialog();
-            s.FileName = "Image";// Default file name
-            s.DefaultExt = ".Jpg";// Default file extension
-            s.Filter = "Image (.jpg)|*.jpg"; // Filter files by extension
-
-            // Show save file dialog box
-            // Process save file dialog box results
-            if (s.ShowDialog() == DialogResult.OK)
-            {
-                // Save Image
-                string filename = s.FileName;
-                FileStream fstream = new FileStream(filename, FileMode.Create);
-                image.Save(fstream, System.Drawing.Imaging.ImageFormat.Jpeg);
-                fstream.Close();
-
-            }
-        }
-        private void btnCapture_Click(object sender, EventArgs e)
-        {
             webcam.Start();
+            webcam.Continue();
+
         }
 
         private void btnStop_Click(object sender, EventArgs e)
@@ -153,6 +128,6 @@ namespace FertilizerProject
             webcam.Stop();
         }
 
-        
+
     }
 }

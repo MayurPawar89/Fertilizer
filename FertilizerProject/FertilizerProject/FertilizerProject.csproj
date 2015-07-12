@@ -80,10 +80,10 @@
     <Compile Include="Edit\frmVoucherPayment.Designer.cs">
       <DependentUpon>frmVoucherPayment.cs</DependentUpon>
     </Compile>
-    <Compile Include="Edit\FrmVoucherReciept.cs">
+    <Compile Include="Go\FrmVoucherReciept.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Edit\FrmVoucherReciept.Designer.cs">
+    <Compile Include="Go\FrmVoucherReciept.Designer.cs">
       <DependentUpon>FrmVoucherReciept.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
@@ -166,7 +166,7 @@
     <EmbeddedResource Include="Edit\frmVoucherPayment.resx">
       <DependentUpon>frmVoucherPayment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Edit\FrmVoucherReciept.resx">
+    <EmbeddedResource Include="Go\FrmVoucherReciept.resx">
       <DependentUpon>FrmVoucherReciept.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">

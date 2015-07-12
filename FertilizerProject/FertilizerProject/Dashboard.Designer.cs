@@ -39,13 +39,13 @@
             this.TSMI_ViewUser = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMI_ViewFertilizer = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMI_ViewCustomer = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSMI_VoucherPayment = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMI_Go = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMI_GoInvoice = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMI_Tools_Settings = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMI_ToolSetting_ServerSetting = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMI_Exit = new System.Windows.Forms.ToolStripMenuItem();
-            this.TSMI_VoucherPayment = new System.Windows.Forms.ToolStripMenuItem();
-            this.TSMI_VoucherReceipt = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSMI_VoucherReciept = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -115,8 +115,7 @@
             this.TSMI_ViewUser,
             this.TSMI_ViewFertilizer,
             this.TSMI_ViewCustomer,
-            this.TSMI_VoucherPayment,
-            this.TSMI_VoucherReceipt});
+            this.TSMI_VoucherPayment});
             this.TSMI_View.Name = "TSMI_View";
             this.TSMI_View.Size = new System.Drawing.Size(44, 20);
             this.TSMI_View.Text = "&View";
@@ -142,10 +141,18 @@
             this.TSMI_ViewCustomer.Text = "View&Customer";
             this.TSMI_ViewCustomer.Click += new System.EventHandler(this.TSMI_ViewCustomer_Click);
             // 
+            // TSMI_VoucherPayment
+            // 
+            this.TSMI_VoucherPayment.Name = "TSMI_VoucherPayment";
+            this.TSMI_VoucherPayment.Size = new System.Drawing.Size(165, 22);
+            this.TSMI_VoucherPayment.Text = "Voucher&Payment";
+            this.TSMI_VoucherPayment.Click += new System.EventHandler(this.TSMI_VoucherPayment_Click);
+            // 
             // TSMI_Go
             // 
             this.TSMI_Go.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.TSMI_GoInvoice});
+            this.TSMI_GoInvoice,
+            this.TSMI_VoucherReciept});
             this.TSMI_Go.Name = "TSMI_Go";
             this.TSMI_Go.Size = new System.Drawing.Size(34, 20);
             this.TSMI_Go.Text = "&Go";
@@ -153,7 +160,7 @@
             // TSMI_GoInvoice
             // 
             this.TSMI_GoInvoice.Name = "TSMI_GoInvoice";
-            this.TSMI_GoInvoice.Size = new System.Drawing.Size(112, 22);
+            this.TSMI_GoInvoice.Size = new System.Drawing.Size(157, 22);
             this.TSMI_GoInvoice.Text = "&Invoice";
             this.TSMI_GoInvoice.Click += new System.EventHandler(this.TSMI_GoInvoice_Click);
             // 
@@ -179,19 +186,12 @@
             this.TSMI_Exit.Text = "E&xit";
             this.TSMI_Exit.Click += new System.EventHandler(this.TSMI_Exit_Click);
             // 
-            // TSMI_VoucherPayment
+            // TSMI_VoucherReciept
             // 
-            this.TSMI_VoucherPayment.Name = "TSMI_VoucherPayment";
-            this.TSMI_VoucherPayment.Size = new System.Drawing.Size(165, 22);
-            this.TSMI_VoucherPayment.Text = "Voucher&Payment";
-            this.TSMI_VoucherPayment.Click += new System.EventHandler(this.TSMI_VoucherPayment_Click);
-            // 
-            // TSMI_VoucherReceipt
-            // 
-            this.TSMI_VoucherReceipt.Name = "TSMI_VoucherReceipt";
-            this.TSMI_VoucherReceipt.Size = new System.Drawing.Size(165, 22);
-            this.TSMI_VoucherReceipt.Text = "Voucher&Reciept";
-            this.TSMI_VoucherReceipt.Click += new System.EventHandler(this.TSMI_VoucherReceipt_Click);
+            this.TSMI_VoucherReciept.Name = "TSMI_VoucherReciept";
+            this.TSMI_VoucherReciept.Size = new System.Drawing.Size(157, 22);
+            this.TSMI_VoucherReciept.Text = "VoucherReciept";
+            this.TSMI_VoucherReciept.Click += new System.EventHandler(this.TSMI_VoucherReciept_Click);
             // 
             // Dashboard
             // 
@@ -233,6 +233,6 @@
         private System.Windows.Forms.ToolStripMenuItem TSMI_ToolSetting_ServerSetting;
         private System.Windows.Forms.ToolStripMenuItem TSMI_GoInvoice;
         private System.Windows.Forms.ToolStripMenuItem TSMI_VoucherPayment;
-        private System.Windows.Forms.ToolStripMenuItem TSMI_VoucherReceipt;
+        private System.Windows.Forms.ToolStripMenuItem TSMI_VoucherReciept;
     }
 }
