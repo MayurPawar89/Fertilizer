@@ -38,17 +38,17 @@
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(207, 65);
+            this.txtUserName.Location = new System.Drawing.Point(134, 41);
             this.txtUserName.Margin = new System.Windows.Forms.Padding(4);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(125, 20);
-            this.txtUserName.TabIndex = 3;
+            this.txtUserName.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(112, 65);
+            this.label1.Location = new System.Drawing.Point(39, 41);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 18);
@@ -59,7 +59,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(121, 98);
+            this.label2.Location = new System.Drawing.Point(48, 74);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 18);
@@ -68,37 +68,39 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(207, 127);
+            this.btnLogin.Location = new System.Drawing.Point(134, 103);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(63, 28);
-            this.btnLogin.TabIndex = 18;
+            this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(276, 127);
+            this.btnCancel.Location = new System.Drawing.Point(203, 103);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(63, 28);
-            this.btnCancel.TabIndex = 19;
+            this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(207, 96);
+            this.txtPassword.Location = new System.Drawing.Point(134, 72);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(125, 20);
-            this.txtPassword.TabIndex = 20;
+            this.txtPassword.TabIndex = 1;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
             // frmLogin
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(536, 241);
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.ClientSize = new System.Drawing.Size(335, 178);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnLogin);
@@ -106,7 +108,8 @@
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.label1);
             this.Name = "frmLogin";
-            this.Text = "frmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "User Login ";
             this.ResumeLayout(false);
             this.PerformLayout();
 
