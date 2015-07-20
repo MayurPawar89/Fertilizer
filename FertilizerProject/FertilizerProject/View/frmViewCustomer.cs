@@ -116,16 +116,21 @@ namespace FertilizerProject
 
         private void frmViewCustomer_Load(object sender, EventArgs e)
         {
-            webcam = new WebCam();
-            webcam.InitializeWebCam(ref pictureBox1);
-            webcam.Start();
-            webcam.Continue();
+            
 
         }
 
         private void btnStop_Click(object sender, EventArgs e)
         {
             webcam.Stop();
+        }
+
+        private void btnCapture_Click(object sender, EventArgs e)
+        {
+            webcam = new WebCam();
+            webcam.InitializeWebCam(ref pictureBox1);
+            webcam.Start();
+            webcam.Continue();
         }
 
 

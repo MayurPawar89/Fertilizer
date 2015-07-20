@@ -71,6 +71,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtCustomerID = new System.Windows.Forms.TextBox();
             this.btnStop = new System.Windows.Forms.Button();
+            this.btnCapture = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -470,7 +471,7 @@
             // 
             // btnStop
             // 
-            this.btnStop.Location = new System.Drawing.Point(649, 470);
+            this.btnStop.Location = new System.Drawing.Point(707, 470);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(75, 26);
             this.btnStop.TabIndex = 81;
@@ -478,11 +479,22 @@
             this.btnStop.UseVisualStyleBackColor = true;
             this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
+            // btnCapture
+            // 
+            this.btnCapture.Location = new System.Drawing.Point(604, 470);
+            this.btnCapture.Name = "btnCapture";
+            this.btnCapture.Size = new System.Drawing.Size(75, 26);
+            this.btnCapture.TabIndex = 82;
+            this.btnCapture.Text = "Capture";
+            this.btnCapture.UseVisualStyleBackColor = true;
+            this.btnCapture.Click += new System.EventHandler(this.btnCapture_Click);
+            // 
             // frmViewCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(951, 625);
+            this.Controls.Add(this.btnCapture);
             this.Controls.Add(this.btnStop);
             this.Controls.Add(this.txtCustomerID);
             this.Controls.Add(this.label8);
@@ -582,5 +594,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtCustomerID;
         private System.Windows.Forms.Button btnStop;
+        private System.Windows.Forms.Button btnCapture;
     }
 }
