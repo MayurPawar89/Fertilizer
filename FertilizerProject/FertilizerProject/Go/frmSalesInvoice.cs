@@ -11,15 +11,15 @@ using System.Windows.Forms;
 
 namespace FertilizerProject
 {
-    public partial class frmGoInvoice : Form
+    public partial class frmSalesInvoice : Form
     {
-        public frmGoInvoice()
+        public frmSalesInvoice()
         {
             InitializeComponent();
         }
         DataTable _dtInvoiveTable = null;
 
-        private void frmGoInvoice_Load(object sender, EventArgs e)
+        private void frmSalesInvoice_Load(object sender, EventArgs e)
         {
             LoadBillingInformation();
             LoadCustomers();

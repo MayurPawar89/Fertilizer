@@ -34,7 +34,7 @@ namespace FertilizerProject
 
         private void TSMI_GoInvoice_Click(object sender, EventArgs e)
         {
-            frmGoInvoice frm = new frmGoInvoice();
+            frmSalesInvoice frm = new frmSalesInvoice();
             frm.MdiParent = this;
             //frm.Dock = DockStyle.Fill;
             frm.Show();
