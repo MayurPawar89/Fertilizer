@@ -114,20 +114,5 @@ namespace FertilizerProject
         {
             Application.Exit();
         }
-
-        private void TSMI_VoucherReceipt_Click_1(object sender, EventArgs e)
-        {
-           FrmVoucherReciept frm = new FrmVoucherReciept();
-            frm.MdiParent = this;
-            //frm.Dock = DockStyle.Fill;
-            frm.Show();
-        }
-
-        private void TSMI_VoucherPayment_Click_1(object sender, EventArgs e)
-        {
-            frmVoucherPayment frm = new frmVoucherPayment();
-            frm.MdiParent = this;
-            frm.Show();
-        }
     }
 }
