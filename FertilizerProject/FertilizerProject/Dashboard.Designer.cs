@@ -153,22 +153,22 @@
             // TSMI_GoInvoice
             // 
             this.TSMI_GoInvoice.Name = "TSMI_GoInvoice";
-            this.TSMI_GoInvoice.Size = new System.Drawing.Size(165, 22);
+            this.TSMI_GoInvoice.Size = new System.Drawing.Size(168, 22);
             this.TSMI_GoInvoice.Text = "&Invoice";
             this.TSMI_GoInvoice.Click += new System.EventHandler(this.TSMI_GoInvoice_Click);
             // 
             // TSMI_VoucherReceipt
             // 
             this.TSMI_VoucherReceipt.Name = "TSMI_VoucherReceipt";
-            this.TSMI_VoucherReceipt.Size = new System.Drawing.Size(165, 22);
-            this.TSMI_VoucherReceipt.Text = "Voucher&Reciept";
+            this.TSMI_VoucherReceipt.Size = new System.Drawing.Size(168, 22);
+            this.TSMI_VoucherReceipt.Text = "Voucher &Reciept";
             this.TSMI_VoucherReceipt.Click += new System.EventHandler(this.TSMI_VoucherReceipt_Click_1);
             // 
             // TSMI_VoucherPayment
             // 
             this.TSMI_VoucherPayment.Name = "TSMI_VoucherPayment";
-            this.TSMI_VoucherPayment.Size = new System.Drawing.Size(165, 22);
-            this.TSMI_VoucherPayment.Text = "Voucher&Payment";
+            this.TSMI_VoucherPayment.Size = new System.Drawing.Size(168, 22);
+            this.TSMI_VoucherPayment.Text = "Voucher &Payment";
             this.TSMI_VoucherPayment.Click += new System.EventHandler(this.TSMI_VoucherPayment_Click_1);
             // 
             // TSMI_Tools_Settings
@@ -182,7 +182,7 @@
             // TSMI_ToolSetting_ServerSetting
             // 
             this.TSMI_ToolSetting_ServerSetting.Name = "TSMI_ToolSetting_ServerSetting";
-            this.TSMI_ToolSetting_ServerSetting.Size = new System.Drawing.Size(152, 22);
+            this.TSMI_ToolSetting_ServerSetting.Size = new System.Drawing.Size(146, 22);
             this.TSMI_ToolSetting_ServerSetting.Text = "&Server Setting";
             this.TSMI_ToolSetting_ServerSetting.Click += new System.EventHandler(this.TSMI_ToolSetting_ServerSetting_Click);
             // 
