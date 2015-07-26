@@ -38,9 +38,9 @@ namespace FertilizerProject.Edit
                 _Customer.sEmailid = txtEmail.Text.Trim();
                 _Customer.sCity = txtCity.Text.Trim();
                 _Customer.dtDOB = Convert.ToDateTime(dob.Text.Trim());
-                _Customer.nOpeningBal = Convert.ToInt64(txtOpening.Text);
-                _Customer.nClosingBal = Convert.ToInt64(txtClosing.Text);
-                _Customer.nInterestRate = Convert.ToInt64(txtInterest.Text);
+                _Customer.nOpeningBal = Convert.ToInt64(txtOpening.Text.Trim());
+                _Customer.nClosingBal = Convert.ToInt64(txtClosing.Text.Trim());
+                _Customer.nInterestRate = Convert.ToInt64(txtInterest.Text.Trim());
                 _Customer.InsertUpdateCustomer();
             }
             catch (Exception ex)
