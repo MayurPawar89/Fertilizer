@@ -22,11 +22,30 @@ namespace FertilizerProject
         {
             txtPassword.Text = "";
             txtUserName.Text = "";
-            this.Close();
+            Application.Exit();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            if (txtUserName.Text.Trim()==""&&txtPassword.Text.Trim()=="")
+            {
+                MessageBox.Show("Please enter username and password!!!");
+                return;
+            }
+            else
+            {
+                if (txtUserName.Text.Trim()=="")
+                {
+                    MessageBox.Show("Please enter username!!!");
+                    return;
+                }
+                else if (txtPassword.Text.Trim()=="")
+                {
+                    MessageBox.Show("Please enter password!!!");
+                    return;
+                }
+            }
+
             string sUserName = string.Empty;
             string sPassword = string.Empty;
             string sDBUserName = string.Empty;

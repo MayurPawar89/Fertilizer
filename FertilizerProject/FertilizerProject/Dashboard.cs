@@ -19,54 +19,6 @@ namespace FertilizerProject
             InitializeComponent();
         }
 
-        private void TSMI_EditUser_Click(object sender, EventArgs e)
-        {
-            frmViewUsers frm = new frmViewUsers();
-            frm.MdiParent = this;
-            //frm.Dock = DockStyle.Fill;
-            frm.Show();
-        }
-
-        private void TSMI_EditFertilizer_Click(object sender, EventArgs e)
-        {
-            frmViewFertilizer frm = new frmViewFertilizer();
-            frm.MdiParent = this;
-            //frm.Dock = DockStyle.Fill;
-            frm.Show();
-        }
-
-        private void TSMI_ViewFertilizer_Click(object sender, EventArgs e)
-        {
-            frmEditFertilizer frm = new frmEditFertilizer();
-            frm.MdiParent = this;
-            //frm.Dock = DockStyle.Fill;
-            frm.Show();
-        }
-
-        private void TSMI_ViewUser_Click(object sender, EventArgs e)
-        {
-            frmEditUser frm = new frmEditUser();
-            frm.MdiParent = this;
-            //frm.Dock = DockStyle.Fill;
-            frm.Show();
-        }
-
-        private void TSMI_ViewCustomer_Click(object sender, EventArgs e)
-        {
-            frmEditCustomer frm = new frmEditCustomer();
-            frm.MdiParent = this;
-            //frm.Dock = DockStyle.Fill;
-            frm.Show();
-        }
-
-        private void TSMI_EditCustomer_Click(object sender, EventArgs e)
-        {
-            frmViewCustomer frm = new frmViewCustomer();
-            frm.MdiParent = this;
-            //frm.Dock = DockStyle.Fill;
-            frm.Show();
-        }
-
         private void TSMI_ToolSetting_ServerSetting_Click(object sender, EventArgs e)
         {
             ServerSettings frm = new ServerSettings();
@@ -100,12 +52,70 @@ namespace FertilizerProject
             frm.Show();
         }
 
-        private void TSMI_VoucherReciept_Click(object sender, EventArgs e)
+        private void TSMI_VoucherReceipt_Click(object sender, EventArgs e)
         {
-            FrmVoucherReciept frm =new FrmVoucherReciept();
-            frm.MdiParent =this;
-            frm.Show ();
+            FrmVoucherReciept frm = new FrmVoucherReciept();
+            frm.MdiParent = this;
+            frm.Show();
         }
+
+        private void TSMI_FileViewUser_Click(object sender, EventArgs e)
+        {
+            frmEditUser frm = new frmEditUser();
+            frm.MdiParent = this;
+            //frm.Dock = DockStyle.Fill;
+            frm.Show();
+        }
+
+        private void TSMI_FileViewItem_Click(object sender, EventArgs e)
+        {
+            frmEditFertilizer frm = new frmEditFertilizer();
+            frm.MdiParent = this;
+            //frm.Dock = DockStyle.Fill;
+            frm.Show();
+        }
+
+        private void TSMI_FileViewCustomer_Click(object sender, EventArgs e)
+        {
+            frmEditCustomer frm = new frmEditCustomer();
+            frm.MdiParent = this;
+            //frm.Dock = DockStyle.Fill;
+            frm.Show();
+        }
+
+        private void TSMI_FileNewUser_Click(object sender, EventArgs e)
+        {
+
+            frmViewUsers frm = new frmViewUsers();
+            frm.MdiParent = this;
+            //frm.Dock = DockStyle.Fill;
+            frm.Show();
+        }
+
+        private void TSMI_FileNewItem_Click(object sender, EventArgs e)
+        {
+            frmViewFertilizer frm = new frmViewFertilizer();
+            frm.MdiParent = this;
+            //frm.Dock = DockStyle.Fill;
+            frm.Show();
+
+        }
+
+        private void TSMI_FileNewCustomer_Click(object sender, EventArgs e)
+        {
+            frmViewCustomer frm = new frmViewCustomer();
+            frm.MdiParent = this;
+            //frm.Dock = DockStyle.Fill;
+            frm.Show();
+            
+        }
+
+        //private void TSMI_VoucherReceipt_Click(object sender, EventArgs e)
+        //{
+        //    FrmVoucherReciept frm = new FrmVoucherReciept();
+        //    frm.MdiParent = this;
+        //    frm.Show();
+        //}
 
        
     }
