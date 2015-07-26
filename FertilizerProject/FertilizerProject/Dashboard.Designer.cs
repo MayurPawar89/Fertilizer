@@ -79,7 +79,7 @@
             this.TSMI_FileNewItem,
             this.TSMI_FileNewCustomer});
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.newToolStripMenuItem.Text = "&New";
             // 
             // TSMI_FileNewUser
@@ -110,34 +110,34 @@
             this.TSMI_FileViewItem,
             this.TSMI_FileViewCustomer});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
-            this.viewToolStripMenuItem.Text = "&View";
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.viewToolStripMenuItem.Text = "&Modify";
             // 
             // TSMI_FileViewUser
             // 
             this.TSMI_FileViewUser.Name = "TSMI_FileViewUser";
-            this.TSMI_FileViewUser.Size = new System.Drawing.Size(126, 22);
+            this.TSMI_FileViewUser.Size = new System.Drawing.Size(152, 22);
             this.TSMI_FileViewUser.Text = "&User";
             this.TSMI_FileViewUser.Click += new System.EventHandler(this.TSMI_FileViewUser_Click);
             // 
             // TSMI_FileViewItem
             // 
             this.TSMI_FileViewItem.Name = "TSMI_FileViewItem";
-            this.TSMI_FileViewItem.Size = new System.Drawing.Size(126, 22);
+            this.TSMI_FileViewItem.Size = new System.Drawing.Size(152, 22);
             this.TSMI_FileViewItem.Text = "&Fertilizer";
             this.TSMI_FileViewItem.Click += new System.EventHandler(this.TSMI_FileViewItem_Click);
             // 
             // TSMI_FileViewCustomer
             // 
             this.TSMI_FileViewCustomer.Name = "TSMI_FileViewCustomer";
-            this.TSMI_FileViewCustomer.Size = new System.Drawing.Size(126, 22);
+            this.TSMI_FileViewCustomer.Size = new System.Drawing.Size(152, 22);
             this.TSMI_FileViewCustomer.Text = "&Customer";
             this.TSMI_FileViewCustomer.Click += new System.EventHandler(this.TSMI_FileViewCustomer_Click);
             // 
             // TSMI_FileExit
             // 
             this.TSMI_FileExit.Name = "TSMI_FileExit";
-            this.TSMI_FileExit.Size = new System.Drawing.Size(99, 22);
+            this.TSMI_FileExit.Size = new System.Drawing.Size(152, 22);
             this.TSMI_FileExit.Text = "E&xit";
             // 
             // TSMI_Go
