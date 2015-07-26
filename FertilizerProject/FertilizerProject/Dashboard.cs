@@ -34,7 +34,7 @@ namespace FertilizerProject
 
         private void TSMI_GoInvoice_Click(object sender, EventArgs e)
         {
-            frmGoInvoice frm = new frmGoInvoice();
+            frmSalesInvoice frm = new frmSalesInvoice();
             frm.MdiParent = this;
             //frm.Dock = DockStyle.Fill;
             frm.Show();
@@ -85,7 +85,7 @@ namespace FertilizerProject
 
         private void TSMI_FileNewUser_Click(object sender, EventArgs e)
         {
-
+            
             frmViewUsers frm = new frmViewUsers();
             frm.MdiParent = this;
             //frm.Dock = DockStyle.Fill;
@@ -98,7 +98,7 @@ namespace FertilizerProject
             frm.MdiParent = this;
             //frm.Dock = DockStyle.Fill;
             frm.Show();
-
+            
         }
 
         private void TSMI_FileNewCustomer_Click(object sender, EventArgs e)
@@ -110,13 +110,24 @@ namespace FertilizerProject
             
         }
 
-        //private void TSMI_VoucherReceipt_Click(object sender, EventArgs e)
-        //{
-        //    FrmVoucherReciept frm = new FrmVoucherReciept();
-        //    frm.MdiParent = this;
-        //    frm.Show();
-        //}
+        private void Dashboard_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
 
-       
+        private void TSMI_VoucherReceipt_Click_1(object sender, EventArgs e)
+        {
+           FrmVoucherReciept frm = new FrmVoucherReciept();
+            frm.MdiParent = this;
+            //frm.Dock = DockStyle.Fill;
+            frm.Show();
+        }
+
+        private void TSMI_VoucherPayment_Click_1(object sender, EventArgs e)
+        {
+            frmVoucherPayment frm = new frmVoucherPayment();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

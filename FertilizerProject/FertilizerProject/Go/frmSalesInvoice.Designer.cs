@@ -1,6 +1,6 @@
 ﻿namespace FertilizerProject
 {
-    partial class frmGoInvoice
+    partial class frmSalesInvoice
     {
         /// <summary>
         /// Required designer variable.
@@ -80,13 +80,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvInvoiceDetails = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.lblUserName = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.rdbCheque = new System.Windows.Forms.RadioButton();
             this.rdbCash = new System.Windows.Forms.RadioButton();
             this.rdbCredit = new System.Windows.Forms.RadioButton();
             this.label17 = new System.Windows.Forms.Label();
             this.lblInvoiceNo = new System.Windows.Forms.Label();
-            this.lblUserName = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPhoto)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -615,6 +615,14 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Billing Information";
             // 
+            // lblUserName
+            // 
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.Location = new System.Drawing.Point(102, 49);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(0, 13);
+            this.lblUserName.TabIndex = 33;
+            // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.rdbCheque);
@@ -678,14 +686,6 @@
             this.lblInvoiceNo.Size = new System.Drawing.Size(0, 13);
             this.lblInvoiceNo.TabIndex = 32;
             // 
-            // lblUserName
-            // 
-            this.lblUserName.AutoSize = true;
-            this.lblUserName.Location = new System.Drawing.Point(102, 49);
-            this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(0, 13);
-            this.lblUserName.TabIndex = 33;
-            // 
             // frmGoInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -696,8 +696,8 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmGoInvoice";
-            this.Text = "Save";
-            this.Load += new System.EventHandler(this.frmGoInvoice_Load);
+            this.Text = "Sales Invoice";
+            this.Load += new System.EventHandler(this.frmSalesInvoice_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPhoto)).EndInit();

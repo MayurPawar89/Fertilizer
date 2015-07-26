@@ -93,6 +93,12 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Go\frmPurchaseInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Go\frmPurchaseInvoice.Designer.cs">
+      <DependentUpon>frmPurchaseInvoice.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\WebCam.cs" />
     <Compile Include="UserControls\CustomControl.cs">
       <SubType>UserControl</SubType>
@@ -124,11 +130,11 @@
     <Compile Include="Edit\frmEditUser.Designer.cs">
       <DependentUpon>frmEditUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Go\frmGoInvoice.cs">
+    <Compile Include="Go\frmSalesInvoice.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Go\frmGoInvoice.Designer.cs">
-      <DependentUpon>frmGoInvoice.cs</DependentUpon>
+    <Compile Include="Go\frmSalesInvoice.Designer.cs">
+      <DependentUpon>frmSalesInvoice.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -171,6 +177,9 @@
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Go\frmPurchaseInvoice.resx">
+      <DependentUpon>frmPurchaseInvoice.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CustomControl.resx">
       <DependentUpon>CustomControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -186,8 +195,8 @@
     <EmbeddedResource Include="Edit\frmEditUser.resx">
       <DependentUpon>frmEditUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Go\frmGoInvoice.resx">
-      <DependentUpon>frmGoInvoice.cs</DependentUpon>
+    <EmbeddedResource Include="Go\frmSalesInvoice.resx">
+      <DependentUpon>frmSalesInvoice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ToolsAndSettings\ServerSettings.resx">
       <DependentUpon>ServerSettings.cs</DependentUpon>
