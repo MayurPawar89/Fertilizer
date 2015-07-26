@@ -76,6 +76,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.pnlTreeView.SuspendLayout();
             this.pnlContent.SuspendLayout();
             this.grpBoxCustomer.SuspendLayout();
@@ -136,11 +139,14 @@
             this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContent.Location = new System.Drawing.Point(200, 0);
             this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(876, 593);
+            this.pnlContent.Size = new System.Drawing.Size(1019, 593);
             this.pnlContent.TabIndex = 2;
             // 
             // grpBoxCustomer
             // 
+            this.grpBoxCustomer.Controls.Add(this.textBox1);
+            this.grpBoxCustomer.Controls.Add(this.label8);
+            this.grpBoxCustomer.Controls.Add(this.checkBox1);
             this.grpBoxCustomer.Controls.Add(this.btnCapture);
             this.grpBoxCustomer.Controls.Add(this.btnStop);
             this.grpBoxCustomer.Controls.Add(this.cmb4);
@@ -188,28 +194,30 @@
             this.grpBoxCustomer.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpBoxCustomer.Location = new System.Drawing.Point(0, 0);
             this.grpBoxCustomer.Name = "grpBoxCustomer";
-            this.grpBoxCustomer.Size = new System.Drawing.Size(876, 593);
+            this.grpBoxCustomer.Size = new System.Drawing.Size(1019, 593);
             this.grpBoxCustomer.TabIndex = 0;
             this.grpBoxCustomer.TabStop = false;
             this.grpBoxCustomer.Text = "groupBox1";
             // 
             // btnCapture
             // 
-            this.btnCapture.Location = new System.Drawing.Point(640, 350);
+            this.btnCapture.Location = new System.Drawing.Point(638, 423);
             this.btnCapture.Name = "btnCapture";
             this.btnCapture.Size = new System.Drawing.Size(75, 26);
             this.btnCapture.TabIndex = 122;
             this.btnCapture.Text = "Capture";
             this.btnCapture.UseVisualStyleBackColor = true;
+            this.btnCapture.Click += new System.EventHandler(this.btnCapture_Click);
             // 
             // btnStop
             // 
-            this.btnStop.Location = new System.Drawing.Point(743, 350);
+            this.btnStop.Location = new System.Drawing.Point(741, 423);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(75, 26);
             this.btnStop.TabIndex = 121;
             this.btnStop.Text = "Stop";
             this.btnStop.UseVisualStyleBackColor = true;
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
             // cmb4
             // 
@@ -415,7 +423,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(715, 131);
+            this.label10.Location = new System.Drawing.Point(713, 204);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(45, 18);
             this.label10.TabIndex = 97;
@@ -424,7 +432,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(604, 166);
+            this.pictureBox1.Location = new System.Drawing.Point(602, 239);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(251, 165);
             this.pictureBox1.TabIndex = 96;
@@ -563,14 +571,44 @@
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMain.Location = new System.Drawing.Point(0, 0);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(1076, 593);
+            this.pnlMain.Size = new System.Drawing.Size(1219, 593);
             this.pnlMain.TabIndex = 2;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(726, 73);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(77, 22);
+            this.checkBox1.TabIndex = 123;
+            this.checkBox1.Text = "Not Self";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(748, 136);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(205, 26);
+            this.textBox1.TabIndex = 125;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(579, 140);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(161, 18);
+            this.label8.TabIndex = 124;
+            this.label8.Text = "Take away Person Name:";
             // 
             // frmEditCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1076, 593);
+            this.ClientSize = new System.Drawing.Size(1219, 593);
             this.Controls.Add(this.pnlMain);
             this.Name = "frmEditCustomer";
             this.Text = "Modify Customer";
@@ -635,5 +673,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label8;
     }
 }
