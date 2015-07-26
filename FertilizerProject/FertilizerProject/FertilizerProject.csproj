@@ -99,7 +99,7 @@
     <Compile Include="Go\frmPurchaseInvoice.Designer.cs">
       <DependentUpon>frmPurchaseInvoice.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\WebCam.cs" />
+    <Compile Include="New\WebCam.cs" />
     <Compile Include="UserControls\CustomControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -112,23 +112,23 @@
     <Compile Include="Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Edit\frmEditCustomer.cs">
+    <Compile Include="Edit\frmViewCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Edit\frmEditCustomer.Designer.cs">
-      <DependentUpon>frmEditCustomer.cs</DependentUpon>
+    <Compile Include="Edit\frmViewCustomer.Designer.cs">
+      <DependentUpon>frmViewCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Edit\frmEditFertilizer.cs">
+    <Compile Include="Edit\frmViewFertilizer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Edit\frmEditFertilizer.Designer.cs">
-      <DependentUpon>frmEditFertilizer.cs</DependentUpon>
+    <Compile Include="Edit\frmViewFertilizer.Designer.cs">
+      <DependentUpon>frmViewFertilizer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Edit\frmEditUser.cs">
+    <Compile Include="Edit\frmViewUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Edit\frmEditUser.Designer.cs">
-      <DependentUpon>frmEditUser.cs</DependentUpon>
+    <Compile Include="Edit\frmViewUser.Designer.cs">
+      <DependentUpon>frmViewUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Go\frmSalesInvoice.cs">
       <SubType>Form</SubType>
@@ -147,27 +147,27 @@
     <Compile Include="ToolsAndSettings\ServerSettings.Designer.cs">
       <DependentUpon>ServerSettings.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmViewCustomer.cs">
+    <Compile Include="New\frmEditCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmViewCustomer.Designer.cs">
-      <DependentUpon>frmViewCustomer.cs</DependentUpon>
+    <Compile Include="New\frmEditCustomer.Designer.cs">
+      <DependentUpon>frmEditCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmViewFertilizer.cs">
+    <Compile Include="New\frmEditFertilizer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmViewFertilizer.Designer.cs">
-      <DependentUpon>frmViewFertilizer.cs</DependentUpon>
+    <Compile Include="New\frmEditFertilizer.Designer.cs">
+      <DependentUpon>frmEditFertilizer.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmViewUsers.cs">
+    <Compile Include="New\frmEditUsers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmViewUsers.Designer.cs">
-      <DependentUpon>frmViewUsers.cs</DependentUpon>
+    <Compile Include="New\frmEditUsers.Designer.cs">
+      <DependentUpon>frmEditUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\ImageViewer.cs" />
+    <Compile Include="New\ImageViewer.cs" />
     <EmbeddedResource Include="Edit\frmVoucherPayment.resx">
       <DependentUpon>frmVoucherPayment.cs</DependentUpon>
     </EmbeddedResource>
@@ -186,14 +186,14 @@
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Edit\frmEditCustomer.resx">
-      <DependentUpon>frmEditCustomer.cs</DependentUpon>
+    <EmbeddedResource Include="Edit\frmViewCustomer.resx">
+      <DependentUpon>frmViewCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Edit\frmEditFertilizer.resx">
-      <DependentUpon>frmEditFertilizer.cs</DependentUpon>
+    <EmbeddedResource Include="Edit\frmViewFertilizer.resx">
+      <DependentUpon>frmViewFertilizer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Edit\frmEditUser.resx">
-      <DependentUpon>frmEditUser.cs</DependentUpon>
+    <EmbeddedResource Include="Edit\frmViewUser.resx">
+      <DependentUpon>frmViewUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Go\frmSalesInvoice.resx">
       <DependentUpon>frmSalesInvoice.cs</DependentUpon>
@@ -201,14 +201,14 @@
     <EmbeddedResource Include="ToolsAndSettings\ServerSettings.resx">
       <DependentUpon>ServerSettings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmViewCustomer.resx">
-      <DependentUpon>frmViewCustomer.cs</DependentUpon>
+    <EmbeddedResource Include="New\frmEditCustomer.resx">
+      <DependentUpon>frmEditCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmViewFertilizer.resx">
-      <DependentUpon>frmViewFertilizer.cs</DependentUpon>
+    <EmbeddedResource Include="New\frmEditFertilizer.resx">
+      <DependentUpon>frmEditFertilizer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmViewUsers.resx">
-      <DependentUpon>frmViewUsers.cs</DependentUpon>
+    <EmbeddedResource Include="New\frmEditUsers.resx">
+      <DependentUpon>frmEditUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -153,7 +153,7 @@
             this.txtUserID.Text = "0";
             this.txtUserID.Visible = false;
             // 
-            // Users
+            // frmViewUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -171,8 +171,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Users";
-            this.Text = "Form1";
+            this.Name = "frmViewUsers";
+            this.Text = "Add User";
             this.ResumeLayout(false);
             this.PerformLayout();
 

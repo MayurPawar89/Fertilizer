@@ -767,7 +767,7 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Name = "frmViewFertilizer";
-            this.Text = "Fertilizer";
+            this.Text = "Add Item";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

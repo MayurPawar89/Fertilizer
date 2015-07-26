@@ -34,6 +34,7 @@
             this.pnlOther = new System.Windows.Forms.Panel();
             this.pnlContent = new System.Windows.Forms.Panel();
             this.grpBoxUsers = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUserID = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -54,7 +55,6 @@
             this.tsbDelete = new System.Windows.Forms.ToolStripButton();
             this.tsbClose = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.label5 = new System.Windows.Forms.Label();
             this.pnlMain.SuspendLayout();
             this.pnlOther.SuspendLayout();
             this.pnlContent.SuspendLayout();
@@ -124,6 +124,15 @@
             this.grpBoxUsers.TabIndex = 0;
             this.grpBoxUsers.TabStop = false;
             this.grpBoxUsers.Text = "User Information";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(55, 175);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(59, 13);
+            this.label5.TabIndex = 27;
+            this.label5.Text = "Password :";
             // 
             // txtPassword
             // 
@@ -321,15 +330,6 @@
             this.toolStripButton1.Size = new System.Drawing.Size(23, 53);
             this.toolStripButton1.Text = "toolStripButton1";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(55, 175);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 13);
-            this.label5.TabIndex = 27;
-            this.label5.Text = "Password :";
-            // 
             // frmEditUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -338,7 +338,7 @@
             this.Controls.Add(this.pnlMain);
             this.Name = "frmEditUser";
             this.ShowInTaskbar = false;
-            this.Text = "Edit User";
+            this.Text = "Modify User";
             this.Load += new System.EventHandler(this.frmEditUser_Load);
             this.pnlMain.ResumeLayout(false);
             this.pnlOther.ResumeLayout(false);

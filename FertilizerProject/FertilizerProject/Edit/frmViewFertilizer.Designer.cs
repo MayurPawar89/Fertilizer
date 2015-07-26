@@ -298,7 +298,7 @@
             this.ClientSize = new System.Drawing.Size(637, 448);
             this.Controls.Add(this.pnlMain);
             this.Name = "frmEditFertilizer";
-            this.Text = "frmEditFertilizer";
+            this.Text = "Modify Item";
             this.Load += new System.EventHandler(this.frmEditFertilizer_Load);
             this.pnlTreeView.ResumeLayout(false);
             this.pnlContent.ResumeLayout(false);
