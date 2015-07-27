@@ -8,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WebCam_Capture;
+using WinFormCharpWebCam;
+using System.IO;
 
 namespace FertilizerProject
 {
@@ -18,13 +21,16 @@ namespace FertilizerProject
             InitializeComponent();
         }
         DataTable _dtInvoiveTable = null;
-
+        WebCam webcam;
+        Int64 i = 0;
         private void frmSalesInvoice_Load(object sender, EventArgs e)
         {
             LoadBillingInformation();
             LoadCustomers();
             LoadFertItems();
             CreateInvoiceTable();
+            label22.Enabled = false;
+            textBox1.Enabled = false;
         }
 
         private void LoadFertItems()
@@ -311,12 +317,55 @@ namespace FertilizerProject
             _Sales.nUnitPrice = Convert.ToDecimal(txtFertUnitPrice.Text);
             _Sales.nDiscount = Convert.ToDecimal(txtFertDiscount.Text);
             _Sales.nAmount = Convert.ToDecimal(txtFertAmount.Text);
-            _Sales.InsertUpdateSales();
+            i=_Sales.InsertUpdateSales();
 
             Fertilizer _Fertilizer = new Fertilizer();
             _Fertilizer.nFertID = Convert.ToInt64(cmbFertilizerList.SelectedValue);
             _Fertilizer.nQuntity = Convert.ToDecimal(txtFertAvailableQuntity.Text);
             _Fertilizer.UpdateFertilizerAfterSales();
+            if (radioButton3.Checked == true)
+            {
+
+                SaveFileDialog s = new SaveFileDialog();
+                s.FileName = i.ToString() + "_" + cmbCustomer.Text.Trim() + "_";// Default file name
+                s.DefaultExt = ".Jpg";// Default file extension
+                s.Filter = "Image (.jpg)|*.jpg"; // Filter files by extension
+                if (s.ShowDialog() == DialogResult.OK)
+                {
+                    string filename = s.FileName;
+                    FileStream fstream = new FileStream(filename, FileMode.Create);
+                    Bitmap bmpImage = new Bitmap(picPhoto.Image);
+                    Bitmap newImg = new Bitmap(bmpImage);
+                    bmpImage.Save(fstream, System.Drawing.Imaging.ImageFormat.Jpeg);
+                    bmpImage.Dispose();
+                    bmpImage = null;
+                    fstream.Close();
+
+                }
+
+            }
+            else if (radioButton2.Checked == true)
+            {
+                SaveFileDialog s = new SaveFileDialog();
+
+                s.FileName = i.ToString() + "_" + textBox1.Text.Trim();
+                s.DefaultExt = ".Jpg";// Default file extension
+                s.Filter = "Image (.jpg)|*.jpg"; // Filter files by extension
+                if (s.ShowDialog() == DialogResult.OK)
+                {
+                    
+                    string filename = s.FileName;
+                    FileStream fstream = new FileStream(filename, FileMode.Create);
+                    Bitmap bmpImage = new Bitmap(picPhoto.Image);
+                    Bitmap newImg = new Bitmap(bmpImage);
+                    bmpImage.Save(fstream, System.Drawing.Imaging.ImageFormat.Jpeg);
+                    bmpImage.Dispose();
+                    bmpImage = null;
+                    fstream.Close();
+
+                }
+
+            }
         }
 
         private bool ValidateControl(bool _bIsFromSave)
@@ -398,6 +447,36 @@ namespace FertilizerProject
         private void btnInvoicePrint_Click(object sender, EventArgs e)
         {
             MessageBox.Show("This functionality is under precess.....");
+        }
+
+        private void btnCapture_Click(object sender, EventArgs e)
+        {
+            webcam = new WebCam();
+            webcam.InitializeWebCam(ref picPhoto);
+            webcam.Start();
+            webcam.Continue();
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+
+            webcam.Stop();
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            label22.Enabled = false;
+            textBox1.Enabled = false;
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton2.Checked == true)
+            {
+
+                label22.Enabled = true;
+                textBox1.Enabled = true;
+            }
         }
     }
 }
