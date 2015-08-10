@@ -63,7 +63,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="WebCam_Capture, Version=1.0.2395.24959, Culture=neutral">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Downloads\WebCam_Capture.dll</HintPath>
+      <HintPath>DLL\WebCam_Capture.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -262,6 +262,7 @@
     <None Include="Resources\banner_agriculture.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DLL\WebCam_Capture.dll" />
     <Content Include="Resources\Modify.png" />
     <None Include="Resources\MyNew.png" />
     <None Include="Resources\MySave.png" />
